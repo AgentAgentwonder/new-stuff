@@ -1,0 +1,3618 @@
+    Checking app v0.1.0 (/home/engine/project/src-tauri)
+warning: unused import: `std::path::PathBuf`
+ --> src/academy/content.rs:4:5
+  |
+4 | use std::path::PathBuf;
+  |     ^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `backtest_engine::BacktestEngine`
+  --> src/ai/mod.rs:14:9
+   |
+14 | pub use backtest_engine::BacktestEngine;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `DateTime`
+ --> src/ai_legacy/mod.rs:5:14
+  |
+5 | use chrono::{DateTime, Utc};
+  |              ^^^^^^^^
+
+warning: unused import: `uuid::Uuid`
+  --> src/ai_legacy/mod.rs:12:5
+   |
+12 | use uuid::Uuid;
+   |     ^^^^^^^^^^
+
+warning: unused import: `Manager`
+ --> src/ai_chat/mod.rs:2:33
+  |
+2 | use tauri::{AppHandle, Emitter, Manager};
+  |                                 ^^^^^^^
+
+warning: unused import: `Timelike`
+ --> src/alerts/logic/conditions.rs:1:35
+  |
+1 | use chrono::{Datelike, NaiveTime, Timelike, Utc};
+  |                                   ^^^^^^^^
+
+warning: unused import: `Permission`
+ --> src/alerts/logic/manager.rs:4:37
+  |
+4 | use super::rule_engine::{AlertRule, Permission, RuleExecutionResult, RuleNode, SharedAccess};
+  |                                     ^^^^^^^^^^
+
+warning: unused import: `ActionExecutionContext`
+ --> src/alerts/logic/rule_engine.rs:1:30
+  |
+1 | use super::actions::{Action, ActionExecutionContext, ActionExecutionResult};
+  |                              ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `std::collections::HashMap`
+ --> src/alerts/price_alerts.rs:4:5
+  |
+4 | use std::collections::HashMap;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `NotificationChannel`
+ --> src/alerts/mod.rs:8:63
+  |
+8 |     AlertTriggerEvent, CompoundCondition, CreateAlertRequest, NotificationChannel, PriceAlert,
+  |                                                               ^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `debug`, `warn`
+  --> src/api/jupiter.rs:10:15
+   |
+10 | use tracing::{debug, instrument, warn};
+   |               ^^^^^              ^^^^
+
+warning: private item shadows public glob re-export
+  --> src/lib.rs:10:1
+   |
+10 | mod auth;
+   | ^^^^^^^^^
+   |
+note: the name `auth` in the type namespace is supposed to be publicly re-exported here
+  --> src/lib.rs:98:9
+   |
+98 | pub use mobile::*;
+   |         ^^^^^^^^^
+note: but the private item here shadows it
+  --> src/lib.rs:10:1
+   |
+10 | mod auth;
+   | ^^^^^^^^^
+   = note: `#[warn(hidden_glob_reexports)]` on by default
+
+warning: unused import: `Zeroize`
+ --> src/auth/session_manager.rs:9:15
+  |
+9 | use zeroize::{Zeroize, Zeroizing};
+  |               ^^^^^^^
+
+warning: unused import: `rand::Rng`
+ --> src/auth/two_factor.rs:7:5
+  |
+7 | use rand::Rng;
+  |     ^^^^^^^^^
+
+warning: unused import: `BackupScheduler`
+  --> src/backup/service.rs:24:21
+   |
+24 |     BackupSchedule, BackupScheduler, BackupStatus, SchedulerError, SharedBackupScheduler,
+   |                     ^^^^^^^^^^^^^^^
+
+warning: unused import: `FromRow`
+ --> src/bots/dca_bot.rs:8:12
+  |
+8 | use sqlx::{FromRow, Pool, Row, Sqlite, SqlitePool};
+  |            ^^^^^^^
+
+warning: the item `Row` is imported redundantly
+  --> src/bots/dca_bot.rs:48:13
+   |
+8  | use sqlx::{FromRow, Pool, Row, Sqlite, SqlitePool};
+   |                           --- the item `Row` is already imported here
+...
+48 |         use sqlx::Row;
+   |             ^^^^^^^^^
+
+warning: the item `Row` is imported redundantly
+  --> src/bots/dca_bot.rs:99:13
+   |
+8  | use sqlx::{FromRow, Pool, Row, Sqlite, SqlitePool};
+   |                           --- the item `Row` is already imported here
+...
+99 |         use sqlx::Row;
+   |             ^^^^^^^^^
+
+warning: unused imports: `Deserialize`, `Serialize`
+ --> src/bridges/commands.rs:1:13
+  |
+1 | use serde::{Deserialize, Serialize};
+  |             ^^^^^^^^^^^  ^^^^^^^^^
+
+warning: unused imports: `Deserialize`, `Serialize`
+ --> src/bridges/types.rs:2:13
+  |
+2 | use serde::{Deserialize, Serialize};
+  |             ^^^^^^^^^^^  ^^^^^^^^^
+
+warning: unused import: `BridgeProvider`
+ --> src/bridges/types.rs:5:5
+  |
+5 |     BridgeProvider, BridgeQuote, BridgeQuoteRequest, BridgeTransaction, BridgeTransactionRequest,
+  |     ^^^^^^^^^^^^^^
+
+warning: unused import: `CacheManager`
+ --> src/cache_commands/mod.rs:2:5
+  |
+2 |     CacheManager, CacheStatistics, CacheTtlConfig, CacheType, SharedCacheManager, WarmProgress,
+  |     ^^^^^^^^^^^^
+
+warning: unused imports: `Deserialize`, `Serialize`
+ --> src/chains/commands.rs:1:13
+  |
+1 | use serde::{Deserialize, Serialize};
+  |             ^^^^^^^^^^^  ^^^^^^^^^
+
+warning: unused import: `ChainManager`
+ --> src/chains/commands.rs:7:35
+  |
+7 | use super::{ChainConfig, ChainId, ChainManager, SharedChainManager};
+  |                                   ^^^^^^^^^^^^
+
+warning: unused import: `PriceUpdate`
+ --> src/chart_stream/mod.rs:1:51
+  |
+1 | use crate::core::price_engine::{get_price_engine, PriceUpdate};
+  |                                                   ^^^^^^^^^^^
+
+warning: unused import: `Manager`
+ --> src/chart_stream/mod.rs:6:33
+  |
+6 | use tauri::{AppHandle, Emitter, Manager, State};
+  |                                 ^^^^^^^
+
+warning: unused import: `Context`
+ --> src/collab/commands.rs:1:14
+  |
+1 | use anyhow::{Context, Result};
+  |              ^^^^^^^
+
+warning: unused import: `crate::collab::moderation::ModerationManager`
+ --> src/collab/commands.rs:7:5
+  |
+7 | use crate::collab::moderation::ModerationManager;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `default_permissions_for_role`
+ --> src/collab/commands.rs:8:58
+  |
+8 | use crate::collab::permissions::{can_modify_permissions, default_permissions_for_role};
+  |                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: the item `OsRng` is imported redundantly
+  --> src/collab/crypto.rs:66:25
+   |
+7  | use rand_core::{OsRng, RngCore};
+   |                 ----- the item `OsRng` is already imported here
+...
+66 |         password_hash::{rand_core::OsRng, PasswordHasher, SaltString},
+   |                         ^^^^^^^^^^^^^^^^
+
+warning: unused import: `DateTime`
+ --> src/collab/moderation.rs:5:14
+  |
+5 | use chrono::{DateTime, Utc};
+  |              ^^^^^^^^
+
+warning: unused import: `Context`
+ --> src/collab/room.rs:4:22
+  |
+4 | use anyhow::{anyhow, Context, Result};
+  |                      ^^^^^^^
+
+warning: unused import: `Context`
+ --> src/collab/rtc.rs:4:14
+  |
+4 | use anyhow::{Context, Result};
+  |              ^^^^^^^
+
+warning: unused imports: `AppHandle`, `Emitter`, `Manager`
+  --> src/core/price_engine.rs:12:13
+   |
+12 | use tauri::{AppHandle, Emitter, Manager};
+   |             ^^^^^^^^^  ^^^^^^^  ^^^^^^^
+
+warning: unused import: `rand::Rng`
+ --> src/core/websocket_manager.rs:6:5
+  |
+6 | use rand::Rng;
+  |     ^^^^^^^^^
+
+warning: unused import: `tokio_tungstenite::tungstenite::Message`
+  --> src/core/websocket_manager.rs:13:5
+   |
+13 | use tokio_tungstenite::tungstenite::Message;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `HistoricalDataPoint`
+ --> src/data/historical/commands.rs:4:22
+  |
+4 | use super::storage::{HistoricalDataPoint, HistoricalDataSet, OrderBookSnapshot};
+  |                      ^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `serde::Serialize`
+ --> src/data/historical/commands.rs:5:5
+  |
+5 | use serde::Serialize;
+  |     ^^^^^^^^^^^^^^^^
+
+warning: unused import: `AppHandle`
+ --> src/data/historical/commands.rs:7:13
+  |
+7 | use tauri::{AppHandle, State};
+  |             ^^^^^^^^^
+
+warning: unused imports: `DateTime`, `Utc`
+ --> src/data/historical/counterfactual.rs:2:14
+  |
+2 | use chrono::{DateTime, TimeZone, Utc};
+  |              ^^^^^^^^            ^^^
+
+warning: unused import: `DateTime`
+ --> src/data/historical/fetcher.rs:4:14
+  |
+4 | use chrono::{DateTime, Utc};
+  |              ^^^^^^^^
+
+warning: unused import: `rand::Rng`
+   --> src/data/historical/fetcher.rs:161:13
+    |
+161 |         use rand::Rng;
+    |             ^^^^^^^^^
+
+warning: unused import: `rand::Rng`
+   --> src/data/historical/fetcher.rs:236:13
+    |
+236 |         use rand::Rng;
+    |             ^^^^^^^^^
+
+warning: unused import: `PortfolioHolding`
+ --> src/data/historical/manager.rs:5:40
+  |
+5 | use super::simulator::{run_simulation, PortfolioHolding, SimulationConfig, SimulationResult};
+  |                                        ^^^^^^^^^^^^^^^^
+
+warning: unused import: `std::path::PathBuf`
+  --> src/data/historical/manager.rs:11:5
+   |
+11 | use std::path::PathBuf;
+   |     ^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `DateTime`, `Utc`
+ --> src/data/historical/simulator.rs:2:14
+  |
+2 | use chrono::{DateTime, Utc};
+  |              ^^^^^^^^  ^^^
+
+warning: unused imports: `DateTime`, `Utc`
+ --> src/defi/types.rs:3:14
+  |
+3 | use chrono::{DateTime, Utc};
+  |              ^^^^^^^^  ^^^
+
+warning: unused import: `rand::Rng`
+   --> src/defi/solend.rs:216:13
+    |
+216 |         use rand::Rng;
+    |             ^^^^^^^^^
+
+warning: unused import: `rand::Rng`
+   --> src/defi/solend.rs:268:13
+    |
+268 |         use rand::Rng;
+    |             ^^^^^^^^^
+
+warning: unused import: `rand::Rng`
+   --> src/defi/marginfi.rs:103:13
+    |
+103 |         use rand::Rng;
+    |             ^^^^^^^^^
+
+warning: unused import: `rand::Rng`
+   --> src/defi/marginfi.rs:140:13
+    |
+140 |         use rand::Rng;
+    |             ^^^^^^^^^
+
+warning: unused import: `rand::Rng`
+  --> src/defi/kamino.rs:73:13
+   |
+73 |         use rand::Rng;
+   |             ^^^^^^^^^
+
+warning: unused import: `rand::Rng`
+   --> src/defi/kamino.rs:116:13
+    |
+116 |         use rand::Rng;
+    |             ^^^^^^^^^
+
+warning: ambiguous glob re-exports
+  --> src/defi/mod.rs:19:9
+   |
+19 | pub use types::*;
+   |         ^^^^^^^^ the name `YieldFarm` in the type namespace is first re-exported here
+...
+24 | pub use yield_farming::*;
+   |         ---------------- but the name `YieldFarm` in the type namespace is also re-exported here
+   |
+   = note: `#[warn(ambiguous_glob_reexports)]` on by default
+
+warning: unused import: `ComprehensiveLogger`
+ --> src/dev_tools/commands.rs:4:21
+  |
+4 | use crate::logger::{ComprehensiveLogger, LogEntry, LogLevel, LoggerConfig, SharedLogger};
+  |                     ^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `ErrorRecoveryManager`, `RecoveryPlan`
+ --> src/dev_tools/commands.rs:6:23
+  |
+6 | use crate::recovery::{ErrorRecoveryManager, RecoveryPlan};
+  |                       ^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^
+
+warning: unused import: `PathBuf`
+ --> src/diagnostics/dependency_manager.rs:7:23
+  |
+7 | use std::path::{Path, PathBuf};
+  |                       ^^^^^^^
+
+warning: unused import: `Path`
+  --> src/diagnostics/engine.rs:13:17
+   |
+13 | use std::path::{Path, PathBuf};
+   |                 ^^^^
+
+warning: unused import: `Emitter`
+ --> src/diagnostics/tauri_commands.rs:4:13
+  |
+4 | use tauri::{Emitter, Manager};
+  |             ^^^^^^^
+
+warning: unused import: `engine::DiagnosticsEngine`
+  --> src/diagnostics/mod.rs:13:9
+   |
+13 | pub use engine::DiagnosticsEngine;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `ComprehensiveLogger`, `LogLevel`
+ --> src/errors/crash_reporter.rs:1:21
+  |
+1 | use crate::logger::{ComprehensiveLogger, LogLevel, SharedLogger};
+  |                     ^^^^^^^^^^^^^^^^^^^  ^^^^^^^^
+
+warning: private item shadows public glob re-export
+  --> src/lib.rs:30:1
+   |
+30 | mod governance;
+   | ^^^^^^^^^^^^^^^
+   |
+note: the name `governance` in the type namespace is supposed to be publicly re-exported here
+  --> src/lib.rs:87:9
+   |
+87 | pub use defi::*;
+   |         ^^^^^^^
+note: but the private item here shadows it
+  --> src/lib.rs:30:1
+   |
+30 | mod governance;
+   | ^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::errors::AppError`
+ --> src/governance/commands.rs:2:5
+  |
+2 | use crate::errors::AppError;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `DateTime`, `Duration`
+ --> src/insiders/alert_manager.rs:2:14
+  |
+2 | use chrono::{DateTime, Duration, Utc};
+  |              ^^^^^^^^  ^^^^^^^^
+
+warning: unused import: `serde_json::json`
+ --> src/insiders/alert_manager.rs:3:5
+  |
+3 | use serde_json::json;
+  |     ^^^^^^^^^^^^^^^^
+
+warning: unused import: `uuid::Uuid`
+ --> src/insiders/types.rs:5:5
+  |
+5 | use uuid::Uuid;
+  |     ^^^^^^^^^^
+
+warning: the item `Row` is imported redundantly
+  --> src/insiders/types.rs:21:13
+   |
+4  | use sqlx::{FromRow, Pool, Row, Sqlite};
+   |                           --- the item `Row` is already imported here
+...
+21 |         use sqlx::Row;
+   |             ^^^^^^^^^
+
+warning: the item `Row` is imported redundantly
+   --> src/insiders/types.rs:146:13
+    |
+4   | use sqlx::{FromRow, Pool, Row, Sqlite};
+    |                           --- the item `Row` is already imported here
+...
+146 |         use sqlx::Row;
+    |             ^^^^^^^^^
+
+warning: unused import: `serde_json::json`
+ --> src/insiders/wallet_monitor.rs:5:5
+  |
+5 | use serde_json::json;
+  |     ^^^^^^^^^^^^^^^^
+
+warning: unused import: `HashMap`
+ --> src/insiders/wallet_monitor.rs:7:24
+  |
+7 | use std::collections::{HashMap, HashSet};
+  |                        ^^^^^^^
+
+warning: unused import: `broadcast`
+  --> src/insiders/wallet_monitor.rs:11:19
+   |
+11 | use tokio::sync::{broadcast, OnceCell, RwLock};
+   |                   ^^^^^^^^^
+
+warning: unused import: `Manager`
+  --> src/launchpad/commands.rs:10:24
+   |
+10 | use tauri::{AppHandle, Manager};
+   |                        ^^^^^^^
+
+warning: unused imports: `Finding`, `RiskLevel`, `Severity`
+ --> src/launchpad/compliance.rs:4:48
+  |
+4 |     perform_audit, AuditMetadata, AuditResult, Finding, RiskLevel, Severity,
+  |                                                ^^^^^^^  ^^^^^^^^^  ^^^^^^^^
+
+warning: the item `RngCore` is imported redundantly
+   --> src/launchpad/liquidity.rs:170:13
+    |
+5   | use rand::RngCore;
+    |     ------------- the item `RngCore` is already imported here
+...
+170 |         use rand::RngCore;
+    |             ^^^^^^^^^^^^^
+
+warning: unused import: `uuid::Uuid`
+ --> src/launchpad/token.rs:9:5
+  |
+9 | use uuid::Uuid;
+  |     ^^^^^^^^^^
+
+warning: unused import: `rand::Rng`
+   --> src/market/trending_coins.rs:204:9
+    |
+204 |     use rand::Rng;
+    |         ^^^^^^^^^
+
+warning: unused import: `rand::Rng`
+   --> src/market/trending_coins.rs:299:9
+    |
+299 |     use rand::Rng;
+    |         ^^^^^^^^^
+
+warning: unused import: `rand::Rng`
+   --> src/market/drift_adapter.rs:278:9
+    |
+278 |     use rand::Rng;
+    |         ^^^^^^^^^
+
+warning: unused import: `rand::Rng`
+   --> src/market/drift_adapter.rs:324:9
+    |
+324 |     use rand::Rng;
+    |         ^^^^^^^^^
+
+warning: unused import: `std::collections::HashMap`
+ --> src/market/holders.rs:4:5
+  |
+4 | use std::collections::HashMap;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `std::collections::HashMap`
+ --> src/market/new_coins_scanner_clean.rs:4:5
+  |
+4 | use std::collections::HashMap;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `DateTime`, `Duration as ChronoDuration`, `Utc`
+ --> src/market/top_coins.rs:1:14
+  |
+1 | use chrono::{DateTime, Duration as ChronoDuration, Utc};
+  |              ^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^^^^  ^^^
+
+warning: unused import: `tauri::Manager`
+ --> src/market/top_coins.rs:5:5
+  |
+5 | use tauri::Manager;
+  |     ^^^^^^^^^^^^^^
+
+warning: unused import: `crate::security::keystore::Keystore`
+ --> src/mobile/auth.rs:2:5
+  |
+2 | use crate::security::keystore::Keystore;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `MobileDevice`, `SharedMobileAuthManager`
+ --> src/mobile/push.rs:1:21
+  |
+1 | use crate::mobile::{MobileDevice, SharedMobileAuthManager};
+  |                     ^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `anyhow`
+ --> src/mobile/push.rs:2:14
+  |
+2 | use anyhow::{anyhow, Result};
+  |              ^^^^^^
+
+warning: unused import: `DiskExt`
+ --> src/monitor/performance.rs:5:23
+  |
+5 | use sysinfo::{CpuExt, DiskExt, NetworkExt, ProcessExt, System, SystemExt};
+  |                       ^^^^^^^
+
+warning: unused import: `DateTime`
+ --> src/notifications/email.rs:1:14
+  |
+1 | use chrono::{DateTime, Utc};
+  |              ^^^^^^^^
+
+warning: unused import: `Attachment`
+ --> src/notifications/email.rs:2:31
+  |
+2 | use lettre::message::{header, Attachment, MultiPart, SinglePart};
+  |                               ^^^^^^^^^^
+
+warning: unused import: `Address`
+ --> src/notifications/email.rs:4:14
+  |
+4 | use lettre::{Address, Message, SmtpTransport, Transport};
+  |              ^^^^^^^
+
+warning: unused import: `DateTime`
+ --> src/notifications/twitter.rs:1:14
+  |
+1 | use chrono::{DateTime, Utc};
+  |              ^^^^^^^^
+
+warning: unused import: `std::time::Duration`
+ --> src/notifications/rate_limiter.rs:2:5
+  |
+2 | use std::time::Duration;
+  |     ^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `Manager`
+ --> src/notifications/router.rs:3:24
+  |
+3 | use tauri::{AppHandle, Manager};
+  |                        ^^^^^^^
+
+warning: unused imports: `DateTime`, `Utc`
+ --> src/notifications/types.rs:1:14
+  |
+1 | use chrono::{DateTime, Utc};
+  |              ^^^^^^^^  ^^^
+
+warning: unused import: `router::*`
+  --> src/notifications/mod.rs:21:9
+   |
+21 | pub use router::*;
+   |         ^^^^^^^^^
+
+warning: unused import: `DateTime`
+ --> src/portfolio/ai_advisor.rs:1:14
+  |
+1 | use chrono::{DateTime, Utc};
+  |              ^^^^^^^^
+
+warning: private item shadows public glob re-export
+  --> src/lib.rs:41:1
+   |
+41 | mod position_manager;
+   | ^^^^^^^^^^^^^^^^^^^^^
+   |
+note: the name `position_manager` in the type namespace is supposed to be publicly re-exported here
+  --> src/lib.rs:87:9
+   |
+87 | pub use defi::*;
+   |         ^^^^^^^
+note: but the private item here shadows it
+  --> src/lib.rs:41:1
+   |
+41 | mod position_manager;
+   | ^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `PositionManager`, `PositionSnapshot`, `get_auto_compound_recommendations`, `get_defi_portfolio_summary`, `get_defi_risk_metrics`, `get_defi_snapshot`
+ --> src/position_manager/mod.rs:5:5
+  |
+5 |     PositionManager, PositionSnapshot, get_auto_compound_recommendations,
+  |     ^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+6 |     get_defi_portfolio_summary, get_defi_risk_metrics, get_defi_snapshot,
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `PortfolioSummary`, `RiskLevel`, `RiskMetrics`
+ --> src/position_manager/mod.rs:8:30
+  |
+8 | pub use crate::defi::types::{PortfolioSummary, RiskLevel, RiskMetrics};
+  |                              ^^^^^^^^^^^^^^^^  ^^^^^^^^^  ^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+  --> src/lib.rs:42:1
+   |
+42 | mod auto_compound;
+   | ^^^^^^^^^^^^^^^^^^
+   |
+note: the name `auto_compound` in the type namespace is supposed to be publicly re-exported here
+  --> src/lib.rs:87:9
+   |
+87 | pub use defi::*;
+   |         ^^^^^^^
+note: but the private item here shadows it
+  --> src/lib.rs:42:1
+   |
+42 | mod auto_compound;
+   | ^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `AutoCompoundEngine`, `CompoundTransaction`, `configure_auto_compound`, `estimate_compound_apy_boost`, `get_auto_compound_config`, `get_compound_history`
+ --> src/auto_compound/mod.rs:5:5
+  |
+5 |     AutoCompoundEngine, CompoundTransaction, configure_auto_compound,
+  |     ^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^
+6 |     estimate_compound_apy_boost, get_auto_compound_config, get_compound_history,
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::defi::types::AutoCompoundSettings`
+ --> src/auto_compound/mod.rs:8:9
+  |
+8 | pub use crate::defi::types::AutoCompoundSettings;
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+  --> src/lib.rs:43:1
+   |
+43 | mod yield_farming;
+   | ^^^^^^^^^^^^^^^^^^
+   |
+note: the name `yield_farming` in the type namespace is supposed to be publicly re-exported here
+  --> src/lib.rs:87:9
+   |
+87 | pub use defi::*;
+   |         ^^^^^^^
+note: but the private item here shadows it
+  --> src/lib.rs:43:1
+   |
+43 | mod yield_farming;
+   | ^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `DeFiPosition`, `PositionType`, `Protocol`, `Reward`
+ --> src/yield_farming/mod.rs:4:30
+  |
+4 | pub use crate::defi::types::{DeFiPosition, Protocol, PositionType, Reward};
+  |                              ^^^^^^^^^^^^  ^^^^^^^^  ^^^^^^^^^^^^  ^^^^^^
+
+warning: unused imports: `FarmingOpportunity`, `YieldFarm`, `YieldFarmingAdapter`, `get_farming_opportunities`, `get_farming_positions`, `get_yield_farms`
+ --> src/yield_farming/mod.rs:6:5
+  |
+6 |     FarmingOpportunity, YieldFarm, YieldFarmingAdapter, get_farming_opportunities,
+  |     ^^^^^^^^^^^^^^^^^^  ^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^^^
+7 |     get_farming_positions, get_yield_farms,
+  |     ^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+  --> src/lib.rs:45:1
+   |
+45 | mod security;
+   | ^^^^^^^^^^^^^
+   |
+note: the name `security` in the type namespace is supposed to be publicly re-exported here
+  --> src/lib.rs:95:9
+   |
+95 | pub use launchpad::*;
+   |         ^^^^^^^^^^^^
+note: but the private item here shadows it
+  --> src/lib.rs:45:1
+   |
+45 | mod security;
+   | ^^^^^^^^^^^^^
+
+warning: unused import: `password_hash::SaltString`
+  --> src/security/keystore.rs:13:14
+   |
+13 | use argon2::{password_hash::SaltString, Algorithm, Argon2, Params, Version};
+   |              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `Zeroize`
+  --> src/security/keystore.rs:20:15
+   |
+20 | use zeroize::{Zeroize, Zeroizing};
+   |               ^^^^^^^
+
+warning: unused import: `State`
+ --> src/security/audit.rs:5:33
+  |
+5 | use tauri::{AppHandle, Manager, State};
+  |                                 ^^^^^
+
+warning: unnecessary parentheses around function argument
+   --> src/security/audit.rs:472:28
+    |
+472 |         holder_count: Some(((hash % 10000) + 100)),
+    |                            ^                    ^
+    |
+    = note: `#[warn(unused_parens)]` on by default
+help: remove these parentheses
+    |
+472 -         holder_count: Some(((hash % 10000) + 100)),
+472 +         holder_count: Some((hash % 10000) + 100),
+    |
+
+warning: unused import: `Duration`
+ --> src/security/reputation.rs:1:24
+  |
+1 | use chrono::{DateTime, Duration, Utc};
+  |                        ^^^^^^^^
+
+warning: unused import: `std::collections::HashMap`
+ --> src/security/reputation.rs:4:5
+  |
+4 | use std::collections::HashMap;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `std::path::PathBuf`
+ --> src/security/reputation.rs:5:5
+  |
+5 | use std::path::PathBuf;
+  |     ^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `types::*`
+  --> src/security/mod.rs:15:9
+   |
+15 | pub use types::*;
+   |         ^^^^^^^^
+
+warning: unused import: `audit_logger::AuditLogger`
+  --> src/security/mod.rs:16:9
+   |
+16 | pub use audit_logger::AuditLogger;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `tx_simulator::TxSimulator`
+  --> src/security/mod.rs:17:9
+   |
+17 | pub use tx_simulator::TxSimulator;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `ledger::LedgerManager`
+  --> src/security/mod.rs:18:9
+   |
+18 | pub use ledger::LedgerManager;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `Serialize`
+ --> src/social/reddit.rs:3:26
+  |
+3 | use serde::{Deserialize, Serialize};
+  |                          ^^^^^^^^^
+
+warning: unused import: `Serialize`
+ --> src/social/twitter.rs:3:26
+  |
+3 | use serde::{Deserialize, Serialize};
+  |                          ^^^^^^^^^
+
+warning: unused import: `Sqlite`
+ --> src/social/analysis/trend_engine.rs:3:17
+  |
+3 | use sqlx::{Row, Sqlite, SqlitePool};
+  |                 ^^^^^^
+
+warning: unused imports: `SharedSocialDataService`, `SocialDataService`
+  --> src/social/mod.rs:25:19
+   |
+25 | pub use service::{SocialDataService, SharedSocialDataService};
+   |                   ^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `Serialize`
+ --> src/stocks/api.rs:3:26
+  |
+3 | use serde::{Deserialize, Serialize};
+  |                          ^^^^^^^^^
+
+warning: unused import: `std::collections::HashMap`
+ --> src/stocks/api.rs:4:5
+  |
+4 | use std::collections::HashMap;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `TaxLot`
+  --> src/tax/mod.rs:16:44
+   |
+16 | use crate::portfolio::{SharedTaxLotsState, TaxLot, TaxReportParams};
+   |                                            ^^^^^^
+
+warning: unused import: `HashSet`
+ --> src/token_flow/clustering.rs:2:33
+  |
+2 | use std::collections::{HashMap, HashSet};
+  |                                 ^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:52:1
+    |
+52  | mod trading;
+    | ^^^^^^^^^^^^
+    |
+note: the name `trading` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:116:9
+    |
+116 | pub use voice::*;
+    |         ^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:52:1
+    |
+52  | mod trading;
+    | ^^^^^^^^^^^^
+
+warning: unused import: `std::collections::HashMap`
+ --> src/trading/backtesting.rs:3:5
+  |
+3 | use std::collections::HashMap;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `FromRow`
+ --> src/trading/copy_trading.rs:4:12
+  |
+4 | use sqlx::{FromRow, Pool, Row, Sqlite, SqlitePool};
+  |            ^^^^^^^
+
+warning: the item `Row` is imported redundantly
+  --> src/trading/copy_trading.rs:37:13
+   |
+4  | use sqlx::{FromRow, Pool, Row, Sqlite, SqlitePool};
+   |                           --- the item `Row` is already imported here
+...
+37 |         use sqlx::Row;
+   |             ^^^^^^^^^
+
+warning: the item `Row` is imported redundantly
+  --> src/trading/copy_trading.rs:83:13
+   |
+4  | use sqlx::{FromRow, Pool, Row, Sqlite, SqlitePool};
+   |                           --- the item `Row` is already imported here
+...
+83 |         use sqlx::Row;
+   |             ^^^^^^^^^
+
+warning: unused import: `OrderType`
+ --> src/trading/database.rs:1:49
+  |
+1 | use crate::trading::types::{Order, OrderStatus, OrderType};
+  |                                                 ^^^^^^^^^
+
+warning: unused import: `BacktestResult`
+ --> src/trading/optimizer.rs:1:73
+  |
+1 | use super::backtesting::{backtest_run, BacktestConfig, BacktestMetrics, BacktestResult};
+  |                                                                         ^^^^^^^^^^^^^^
+
+warning: unused import: `OrderDatabase`
+ --> src/trading/order_manager.rs:2:32
+  |
+2 | use crate::trading::database::{OrderDatabase, SharedOrderDatabase};
+  |                                ^^^^^^^^^^^^^
+
+warning: unused imports: `OrderFill`, `OrderUpdate`, `QuickTradeRequest`
+ --> src/trading/order_manager.rs:4:32
+  |
+4 |     CreateOrderRequest, Order, OrderFill, OrderSide, OrderStatus, OrderType, OrderUpdate,
+  |                                ^^^^^^^^^                                     ^^^^^^^^^^^
+5 |     QuickTradeRequest,
+  |     ^^^^^^^^^^^^^^^^^
+
+warning: unused import: `rand::Rng`
+ --> src/trading/paper_trading.rs:3:5
+  |
+3 | use rand::Rng;
+  |     ^^^^^^^^^
+
+warning: unused import: `FromRow`
+ --> src/trading/paper_trading.rs:5:12
+  |
+5 | use sqlx::{FromRow, Pool, Sqlite, SqlitePool};
+  |            ^^^^^^^
+
+warning: unused import: `sqlx::FromRow`
+ --> src/trading/types.rs:4:5
+  |
+4 | use sqlx::FromRow;
+  |     ^^^^^^^^^^^^^
+
+warning: unused import: `PriceUpdate`
+  --> src/trading/mod.rs:22:69
+   |
+22 | pub use price_listener::{start_price_listener, update_order_prices, PriceUpdate};
+   |                                                                     ^^^^^^^^^^^
+
+warning: unused import: `SafetyCheckResult`
+  --> src/trading/mod.rs:25:61
+   |
+25 |     PolicyCheckResult, PolicyViolation, SafetyCheckRequest, SafetyCheckResult, SafetyEngine,
+   |                                                             ^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `Listener`, `PredefinedMenuItem`, `WebviewWindow`
+  --> src/tray/mod.rs:8:41
+   |
+8  |     menu::{Menu, MenuBuilder, MenuItem, PredefinedMenuItem},
+   |                                         ^^^^^^^^^^^^^^^^^^
+9  |     tray::{MouseButton, MouseButtonState, TrayIcon, TrayIconBuilder, TrayIconEvent},
+10 |     AppHandle, Emitter, Listener, Manager, WebviewWindow, WindowEvent,
+   |                         ^^^^^^^^           ^^^^^^^^^^^^^
+
+warning: unused import: `super::hardware_wallet::DeviceType`
+ --> src/wallet/ledger.rs:1:5
+  |
+1 | use super::hardware_wallet::DeviceType;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `solana_client::rpc_client::RpcClient`
+ --> src/wallet/multisig.rs:4:5
+  |
+4 | use solana_client::rpc_client::RpcClient;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `AccountMeta`, `Instruction`, `pubkey::Pubkey`, `signature::Signature`, `transaction::Transaction`
+ --> src/wallet/multisig.rs:6:19
+  |
+6 |     instruction::{AccountMeta, Instruction},
+  |                   ^^^^^^^^^^^  ^^^^^^^^^^^
+7 |     pubkey::Pubkey,
+  |     ^^^^^^^^^^^^^^
+8 |     signature::Signature,
+  |     ^^^^^^^^^^^^^^^^^^^^
+9 |     transaction::Transaction,
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `FromRow`
+ --> src/wallet/performance.rs:5:12
+  |
+5 | use sqlx::{FromRow, Pool, Row, Sqlite, SqlitePool};
+  |            ^^^^^^^
+
+warning: the item `Row` is imported redundantly
+  --> src/wallet/performance.rs:32:13
+   |
+5  | use sqlx::{FromRow, Pool, Row, Sqlite, SqlitePool};
+   |                           --- the item `Row` is already imported here
+...
+32 |         use sqlx::Row;
+   |             ^^^^^^^^^
+
+warning: the item `Row` is imported redundantly
+  --> src/wallet/performance.rs:78:13
+   |
+5  | use sqlx::{FromRow, Pool, Row, Sqlite, SqlitePool};
+   |                           --- the item `Row` is already imported here
+...
+78 |         use sqlx::Row;
+   |             ^^^^^^^^^
+
+warning: the item `Row` is imported redundantly
+   --> src/wallet/performance.rs:963:13
+    |
+5   | use sqlx::{FromRow, Pool, Row, Sqlite, SqlitePool};
+    |                           --- the item `Row` is already imported here
+...
+963 |         use sqlx::Row;
+    |             ^^^^^^^^^
+
+warning: unused import: `Emitter`
+  --> src/wallet/phantom.rs:10:24
+   |
+10 | use tauri::{AppHandle, Emitter, Manager, State};
+   |                        ^^^^^^^
+
+warning: unused import: `WebhookError`
+ --> src/webhooks/commands.rs:2:55
+  |
+2 | use super::types::{WebhookConfig, WebhookDeliveryLog, WebhookError, WebhookTestResult};
+  |                                                       ^^^^^^^^^^^^
+
+warning: unused import: `RetryPolicy`
+ --> src/webhooks/manager.rs:4:21
+  |
+4 |     DeliveryStatus, RetryPolicy, WebhookConfig, WebhookDeliveryLog, WebhookError, WebhookMethod,
+  |                     ^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+  --> src/lib.rs:60:1
+   |
+60 | mod websocket;
+   | ^^^^^^^^^^^^^^
+   |
+note: the name `websocket` in the type namespace is supposed to be publicly re-exported here
+  --> src/lib.rs:82:9
+   |
+82 | pub use collab::*;
+   |         ^^^^^^^^^
+note: but the private item here shadows it
+  --> src/lib.rs:60:1
+   |
+60 | mod websocket;
+   | ^^^^^^^^^^^^^^
+
+warning: unused import: `url::Url`
+  --> src/websocket/helius.rs:12:5
+   |
+12 | use url::Url;
+   |     ^^^^^^^^
+
+warning: unused import: `Window`
+ --> src/windowing/mod.rs:2:54
+  |
+2 | use tauri::{Manager, PhysicalPosition, PhysicalSize, Window, WebviewUrl, WebviewWindowBuilder};
+  |                                                      ^^^^^^
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:63:9
+    |
+63  | pub use academy::*;
+    |         ^^^^^^^^^^ the name `commands` in the type namespace is first re-exported here
+...
+122 | pub use webhooks::*;
+    |         ----------- but the name `commands` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:63:9
+    |
+63  | pub use academy::*;
+    |         ^^^^^^^^^^ the name `Reward` in the type namespace is first re-exported here
+...
+105 | pub use yield_farming::*;
+    |         ---------------- but the name `Reward` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:64:9
+    |
+64  | pub use governance::*;
+    |         ^^^^^^^^^^^^^ the name `manager` in the type namespace is first re-exported here
+...
+122 | pub use webhooks::*;
+    |         ----------- but the name `manager` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:64:9
+    |
+64  | pub use governance::*;
+    |         ^^^^^^^^^^^^^ the name `types` in the type namespace is first re-exported here
+...
+122 | pub use webhooks::*;
+    |         ----------- but the name `types` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:65:9
+    |
+65  | pub use journal::*;
+    |         ^^^^^^^^^^ the name `analytics` in the type namespace is first re-exported here
+...
+102 | pub use portfolio::*;
+    |         ------------ but the name `analytics` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:65:9
+    |
+65  | pub use journal::*;
+    |         ^^^^^^^^^^ the name `database` in the type namespace is first re-exported here
+...
+112 | pub use trading::*;
+    |         ---------- but the name `database` in the type namespace is also re-exported here
+
+warning: unused import: `ReputationEngine`
+ --> src/p2p/compliance.rs:2:35
+  |
+2 | use crate::security::reputation::{ReputationEngine, WalletReputation};
+  |                                   ^^^^^^^^^^^^^^^^
+
+warning: unused import: `std::sync::Arc`
+ --> src/p2p/compliance.rs:4:5
+  |
+4 | use std::sync::Arc;
+  |     ^^^^^^^^^^^^^^
+
+warning: unused import: `tokio::sync::RwLock`
+ --> src/p2p/compliance.rs:5:5
+  |
+5 | use tokio::sync::RwLock;
+  |     ^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `AccountMeta`, `Instruction`, `Keypair`, `Signer`, `system_instruction`, `transaction::Transaction`
+ --> src/p2p/escrow.rs:5:19
+  |
+5 |     instruction::{AccountMeta, Instruction},
+  |                   ^^^^^^^^^^^  ^^^^^^^^^^^
+6 |     pubkey::Pubkey,
+7 |     signature::{Keypair, Signer},
+  |                 ^^^^^^^  ^^^^^^
+8 |     system_instruction,
+  |     ^^^^^^^^^^^^^^^^^^
+9 |     transaction::Transaction,
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `anyhow::Result`
+ --> src/p2p/matching.rs:3:5
+  |
+3 | use anyhow::Result;
+  |     ^^^^^^^^^^^^^^
+
+warning: unused imports: `Rng`, `seq::SliceRandom`
+ --> src/p2p/matching.rs:5:12
+  |
+5 | use rand::{seq::SliceRandom, Rng};
+  |            ^^^^^^^^^^^^^^^^  ^^^
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:67:9
+    |
+67  | pub use ai::*;
+    |         ^^^^^ the name `BacktestEngine` in the type namespace is first re-exported here
+...
+112 | pub use trading::*;
+    |         ---------- but the name `BacktestEngine` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:67:9
+    |
+67  | pub use ai::*;
+    |         ^^^^^ the name `SentimentDataPoint` in the type namespace is first re-exported here
+...
+107 | pub use sentiment::*;
+    |         ------------ but the name `SentimentDataPoint` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+  --> src/lib.rs:67:9
+   |
+67 | pub use ai::*;
+   |         ^^^^^ the name `Condition` in the type namespace is first re-exported here
+...
+70 | pub use alerts::*;
+   |         --------- but the name `Condition` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:67:9
+    |
+67  | pub use ai::*;
+    |         ^^^^^ the name `BacktestResult` in the type namespace is first re-exported here
+...
+112 | pub use trading::*;
+    |         ---------- but the name `BacktestResult` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:67:9
+    |
+67  | pub use ai::*;
+    |         ^^^^^ the name `EquityPoint` in the type namespace is first re-exported here
+...
+112 | pub use trading::*;
+    |         ---------- but the name `EquityPoint` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+  --> src/lib.rs:68:9
+   |
+68 | pub use ai_legacy::*;
+   |         ^^^^^^^^^^^^ the name `ChatResponse` in the type namespace is first re-exported here
+69 | pub use ai_chat::*;
+   |         ---------- but the name `ChatResponse` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+  --> src/lib.rs:68:9
+   |
+68 | pub use ai_legacy::*;
+   |         ^^^^^^^^^^^^ the name `UsageStats` in the type namespace is first re-exported here
+...
+73 | pub use api_analytics::*;
+   |         ---------------- but the name `UsageStats` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:69:9
+    |
+69  | pub use ai_chat::*;
+    |         ^^^^^^^^^^ the name `ChatMessage` in the type namespace is first re-exported here
+...
+101 | pub use p2p::*;
+    |         ------ but the name `ChatMessage` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+  --> src/lib.rs:70:9
+   |
+70 | pub use alerts::*;
+   |         ^^^^^^^^^ the name `ActionType` in the type namespace is first re-exported here
+...
+86 | pub use data::*;
+   |         ------- but the name `ActionType` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+  --> src/lib.rs:70:9
+   |
+70 | pub use alerts::*;
+   |         ^^^^^^^^^ the name `TradeSide` in the type namespace is first re-exported here
+...
+98 | pub use mobile::*;
+   |         --------- but the name `TradeSide` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:70:9
+    |
+70  | pub use alerts::*;
+    |         ^^^^^^^^^ the name `OrderType` in the type namespace is first re-exported here
+...
+112 | pub use trading::*;
+    |         ---------- but the name `OrderType` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+  --> src/lib.rs:72:9
+   |
+72 | pub use api::*;
+   |         ^^^^^^ the name `jupiter` in the type namespace is first re-exported here
+...
+87 | pub use defi::*;
+   |         ------- but the name `jupiter` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+  --> src/lib.rs:72:9
+   |
+72 | pub use api::*;
+   |         ^^^^^^ the name `RateLimitInfo` in the type namespace is first re-exported here
+73 | pub use api_analytics::*;
+74 | pub use api_config::*;
+   |         ------------- but the name `RateLimitInfo` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:73:9
+    |
+73  | pub use api_analytics::*;
+    |         ^^^^^^^^^^^^^^^^ the name `AlertType` in the type namespace is first re-exported here
+...
+111 | pub use token_flow::*;
+    |         ------------- but the name `AlertType` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:77:9
+    |
+77  | pub use backup::*;
+    |         ^^^^^^^^^ the name `service` in the type namespace is first re-exported here
+...
+108 | pub use social::*;
+    |         --------- but the name `service` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+  --> src/lib.rs:77:9
+   |
+77 | pub use backup::*;
+   |         ^^^^^^^^^ the name `settings_manager` in the type namespace is first re-exported here
+...
+84 | pub use config::*;
+   |         --------- but the name `settings_manager` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+  --> src/lib.rs:77:9
+   |
+77 | pub use backup::*;
+   |         ^^^^^^^^^ the name `TradingSettings` in the type namespace is first re-exported here
+...
+84 | pub use config::*;
+   |         --------- but the name `TradingSettings` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+  --> src/lib.rs:77:9
+   |
+77 | pub use backup::*;
+   |         ^^^^^^^^^ the name `SecuritySettings` in the type namespace is first re-exported here
+...
+84 | pub use config::*;
+   |         --------- but the name `SecuritySettings` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+  --> src/lib.rs:77:9
+   |
+77 | pub use backup::*;
+   |         ^^^^^^^^^ the name `SettingsError` in the type namespace is first re-exported here
+...
+84 | pub use config::*;
+   |         --------- but the name `SettingsError` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:79:9
+    |
+79  | pub use bridges::*;
+    |         ^^^^^^^^^^ the name `BridgeProvider` in the type namespace is first re-exported here
+...
+120 | pub use wallet::operations::*;
+    |         --------------------- but the name `BridgeProvider` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:80:9
+    |
+80  | pub use chains::*;
+    |         ^^^^^^^^^ the name `TokenBalance` in the type namespace is first re-exported here
+...
+120 | pub use wallet::operations::*;
+    |         --------------------- but the name `TokenBalance` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:80:9
+    |
+80  | pub use chains::*;
+    |         ^^^^^^^^^ the name `WalletInfo` in the type namespace is first re-exported here
+...
+119 | pub use wallet::multi_wallet::*;
+    |         ----------------------- but the name `WalletInfo` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+  --> src/lib.rs:84:9
+   |
+84 | pub use config::*;
+   |         ^^^^^^^^^ the name `LogLevel` in the type namespace is first re-exported here
+...
+96 | pub use logger::*;
+   |         --------- but the name `LogLevel` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+  --> src/lib.rs:85:9
+   |
+85 | pub use core::*;
+   |         ^^^^^^^ the name `CacheEntry` in the type namespace is first re-exported here
+...
+97 | pub use market::*;
+   |         --------- but the name `CacheEntry` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:85:9
+    |
+85  | pub use core::*;
+    |         ^^^^^^^ the name `PriceUpdate` in the type namespace is first re-exported here
+...
+112 | pub use trading::*;
+    |         ---------- but the name `PriceUpdate` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:85:9
+    |
+85  | pub use core::*;
+    |         ^^^^^^^ the name `PerformanceMetrics` in the type namespace is first re-exported here
+...
+119 | pub use wallet::multi_wallet::*;
+    |         ----------------------- but the name `PerformanceMetrics` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:87:9
+    |
+87  | pub use defi::*;
+    |         ^^^^^^^ the name `RiskLevel` in the type namespace is first re-exported here
+...
+111 | pub use token_flow::*;
+    |         ------------- but the name `RiskLevel` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:87:9
+    |
+87  | pub use defi::*;
+    |         ^^^^^^^ the name `RiskMetrics` in the type namespace is first re-exported here
+...
+102 | pub use portfolio::*;
+    |         ------------ but the name `RiskMetrics` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:87:9
+    |
+87  | pub use defi::*;
+    |         ^^^^^^^ the name `ProposalStatus` in the type namespace is first re-exported here
+...
+124 | pub use wallet::multisig::*;
+    |         ------------------- but the name `ProposalStatus` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+  --> src/lib.rs:87:9
+   |
+64 | pub use governance::*;
+   |         ------------- but the name `GovernanceProposal` in the type namespace is also re-exported here
+...
+87 | pub use defi::*;
+   |         ^^^^^^^ the name `GovernanceProposal` in the type namespace is first re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:87:9
+    |
+87  | pub use defi::*;
+    |         ^^^^^^^ the name `YieldFarm` in the type namespace is first re-exported here
+...
+105 | pub use yield_farming::*;
+    |         ---------------- but the name `YieldFarm` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:94:9
+    |
+94  | pub use insiders::*;
+    |         ^^^^^^^^^^^ the name `WalletActivity` in the type namespace is first re-exported here
+...
+112 | pub use trading::*;
+    |         ---------- but the name `WalletActivity` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:95:9
+    |
+95  | pub use launchpad::*;
+    |         ^^^^^^^^^^^^ the name `compliance` in the type namespace is first re-exported here
+...
+101 | pub use p2p::*;
+    |         ------ but the name `compliance` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:95:9
+    |
+95  | pub use launchpad::*;
+    |         ^^^^^^^^^^^^ the name `SafetyCheckResult` in the type namespace is first re-exported here
+...
+112 | pub use trading::*;
+    |         ---------- but the name `SafetyCheckResult` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+  --> src/lib.rs:95:9
+   |
+95 | pub use launchpad::*;
+   |         ^^^^^^^^^^^^ the name `TokenMetadata` in the type namespace is first re-exported here
+96 | pub use logger::*;
+97 | pub use market::*;
+   |         --------- but the name `TokenMetadata` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:98:9
+    |
+98  | pub use mobile::*;
+    |         ^^^^^^^^^ the name `QuickTradeRequest` in the type namespace is first re-exported here
+...
+112 | pub use trading::*;
+    |         ---------- but the name `QuickTradeRequest` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:100:9
+    |
+100 | pub use notifications::*;
+    |         ^^^^^^^^^^^^^^^^ the name `twitter` in the type namespace is first re-exported here
+...
+108 | pub use social::*;
+    |         --------- but the name `twitter` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:100:9
+    |
+100 | pub use notifications::*;
+    |         ^^^^^^^^^^^^^^^^ the name `DeliveryStatus` in the type namespace is first re-exported here
+...
+122 | pub use webhooks::*;
+    |         ----------- but the name `DeliveryStatus` in the type namespace is also re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:102:9
+    |
+102 | pub use portfolio::*;
+    |         ^^^^^^^^^^^^ the name `Position` in the type namespace is first re-exported here
+...
+112 | pub use trading::*;
+    |         ---------- but the name `Position` in the type namespace is also re-exported here
+
+warning: unused import: `position_manager::*`
+   --> src/lib.rs:103:9
+    |
+103 | pub use position_manager::*;
+    |         ^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `auto_compound::*`
+   --> src/lib.rs:104:9
+    |
+104 | pub use auto_compound::*;
+    |         ^^^^^^^^^^^^^^^^
+
+warning: unused import: `yield_farming::*`
+   --> src/lib.rs:105:9
+    |
+105 | pub use yield_farming::*;
+    |         ^^^^^^^^^^^^^^^^
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:108:9
+    |
+101 | pub use p2p::*;
+    |         ------ but the name `TraderProfile` in the type namespace is also re-exported here
+...
+108 | pub use social::*;
+    |         ^^^^^^^^^ the name `TraderProfile` in the type namespace is first re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:111:9
+    |
+70  | pub use alerts::*;
+    |         --------- but the name `NotificationChannel` in the type namespace is also re-exported here
+...
+111 | pub use token_flow::*;
+    |         ^^^^^^^^^^^^^ the name `NotificationChannel` in the type namespace is first re-exported here
+
+warning: ambiguous glob re-exports
+   --> src/lib.rs:112:9
+    |
+112 | pub use trading::*;
+    |         ^^^^^^^^^^ the name `Trade` in the type namespace is first re-exported here
+...
+125 | pub use wallet::performance::*;
+    |         ---------------------- but the name `Trade` in the type namespace is also re-exported here
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:129:5
+    |
+129 |     add_launch_training_data, extract_token_features, get_launch_bias_report,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `add_launch_training_data` in the value namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:68:9
+    |
+68  | pub use ai_legacy::*;
+    |         ^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:129:5
+    |
+129 |     add_launch_training_data, extract_token_features, get_launch_bias_report,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:129:31
+    |
+129 |     add_launch_training_data, extract_token_features, get_launch_bias_report,
+    |                               ^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `extract_token_features` in the value namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:68:9
+    |
+68  | pub use ai_legacy::*;
+    |         ^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:129:31
+    |
+129 |     add_launch_training_data, extract_token_features, get_launch_bias_report,
+    |                               ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:129:55
+    |
+129 |     add_launch_training_data, extract_token_features, get_launch_bias_report,
+    |                                                       ^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `get_launch_bias_report` in the value namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:68:9
+    |
+68  | pub use ai_legacy::*;
+    |         ^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:129:55
+    |
+129 |     add_launch_training_data, extract_token_features, get_launch_bias_report,
+    |                                                       ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:130:5
+    |
+130 |     get_launch_prediction_history, load_latest_launch_model, predict_launch_success,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `get_launch_prediction_history` in the value namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:68:9
+    |
+68  | pub use ai_legacy::*;
+    |         ^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:130:5
+    |
+130 |     get_launch_prediction_history, load_latest_launch_model, predict_launch_success,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:130:36
+    |
+130 |     get_launch_prediction_history, load_latest_launch_model, predict_launch_success,
+    |                                    ^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `load_latest_launch_model` in the value namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:68:9
+    |
+68  | pub use ai_legacy::*;
+    |         ^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:130:36
+    |
+130 |     get_launch_prediction_history, load_latest_launch_model, predict_launch_success,
+    |                                    ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:130:62
+    |
+130 |     get_launch_prediction_history, load_latest_launch_model, predict_launch_success,
+    |                                                              ^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `predict_launch_success` in the value namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:68:9
+    |
+68  | pub use ai_legacy::*;
+    |         ^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:130:62
+    |
+130 |     get_launch_prediction_history, load_latest_launch_model, predict_launch_success,
+    |                                                              ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:131:5
+    |
+131 |     retrain_launch_model, LaunchPredictor, SharedLaunchPredictor,
+    |     ^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `retrain_launch_model` in the value namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:68:9
+    |
+68  | pub use ai_legacy::*;
+    |         ^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:131:5
+    |
+131 |     retrain_launch_model, LaunchPredictor, SharedLaunchPredictor,
+    |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:131:27
+    |
+131 |     retrain_launch_model, LaunchPredictor, SharedLaunchPredictor,
+    |                           ^^^^^^^^^^^^^^^
+    |
+note: the name `LaunchPredictor` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:68:9
+    |
+68  | pub use ai_legacy::*;
+    |         ^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:131:27
+    |
+131 |     retrain_launch_model, LaunchPredictor, SharedLaunchPredictor,
+    |                           ^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:131:44
+    |
+131 |     retrain_launch_model, LaunchPredictor, SharedLaunchPredictor,
+    |                                            ^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedLaunchPredictor` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:68:9
+    |
+68  | pub use ai_legacy::*;
+    |         ^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:131:44
+    |
+131 |     retrain_launch_model, LaunchPredictor, SharedLaunchPredictor,
+    |                                            ^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:133:14
+    |
+133 | use alerts::{AlertManager, SharedAlertManager, SharedSmartAlertManager, SmartAlertManager};
+    |              ^^^^^^^^^^^^
+    |
+note: the name `AlertManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:94:9
+    |
+94  | pub use insiders::*;
+    |         ^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:133:14
+    |
+133 | use alerts::{AlertManager, SharedAlertManager, SharedSmartAlertManager, SmartAlertManager};
+    |              ^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:133:28
+    |
+133 | use alerts::{AlertManager, SharedAlertManager, SharedSmartAlertManager, SmartAlertManager};
+    |                            ^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedAlertManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:70:9
+    |
+70  | pub use alerts::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:133:28
+    |
+133 | use alerts::{AlertManager, SharedAlertManager, SharedSmartAlertManager, SmartAlertManager};
+    |                            ^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:133:48
+    |
+133 | use alerts::{AlertManager, SharedAlertManager, SharedSmartAlertManager, SmartAlertManager};
+    |                                                ^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedSmartAlertManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:70:9
+    |
+70  | pub use alerts::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:133:48
+    |
+133 | use alerts::{AlertManager, SharedAlertManager, SharedSmartAlertManager, SmartAlertManager};
+    |                                                ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:133:73
+    |
+133 | use alerts::{AlertManager, SharedAlertManager, SharedSmartAlertManager, SmartAlertManager};
+    |                                                                         ^^^^^^^^^^^^^^^^^
+    |
+note: the name `SmartAlertManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:70:9
+    |
+70  | pub use alerts::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:133:73
+    |
+133 | use alerts::{AlertManager, SharedAlertManager, SharedSmartAlertManager, SmartAlertManager};
+    |                                                                         ^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:134:11
+    |
+134 | use api::{ApiHealthMonitor, SharedApiHealthMonitor};
+    |           ^^^^^^^^^^^^^^^^
+    |
+note: the name `ApiHealthMonitor` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:72:9
+    |
+72  | pub use api::*;
+    |         ^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:134:11
+    |
+134 | use api::{ApiHealthMonitor, SharedApiHealthMonitor};
+    |           ^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:134:29
+    |
+134 | use api::{ApiHealthMonitor, SharedApiHealthMonitor};
+    |                             ^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedApiHealthMonitor` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:72:9
+    |
+72  | pub use api::*;
+    |         ^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:134:29
+    |
+134 | use api::{ApiHealthMonitor, SharedApiHealthMonitor};
+    |                             ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:137:18
+    |
+137 | use auto_start::{AutoStartManager, SharedAutoStartManager};
+    |                  ^^^^^^^^^^^^^^^^
+    |
+note: the name `AutoStartManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:76:9
+    |
+76  | pub use auto_start::*;
+    |         ^^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:137:18
+    |
+137 | use auto_start::{AutoStartManager, SharedAutoStartManager};
+    |                  ^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:137:36
+    |
+137 | use auto_start::{AutoStartManager, SharedAutoStartManager};
+    |                                    ^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedAutoStartManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:76:9
+    |
+76  | pub use auto_start::*;
+    |         ^^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:137:36
+    |
+137 | use auto_start::{AutoStartManager, SharedAutoStartManager};
+    |                                    ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:138:15
+    |
+138 | use bridges::{BridgeManager, SharedBridgeManager};
+    |               ^^^^^^^^^^^^^
+    |
+note: the name `BridgeManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:79:9
+    |
+79  | pub use bridges::*;
+    |         ^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:138:15
+    |
+138 | use bridges::{BridgeManager, SharedBridgeManager};
+    |               ^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:138:30
+    |
+138 | use bridges::{BridgeManager, SharedBridgeManager};
+    |                              ^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedBridgeManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:79:9
+    |
+79  | pub use bridges::*;
+    |         ^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:138:30
+    |
+138 | use bridges::{BridgeManager, SharedBridgeManager};
+    |                              ^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:139:14
+    |
+139 | use chains::{ChainManager, SharedChainManager};
+    |              ^^^^^^^^^^^^
+    |
+note: the name `ChainManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:80:9
+    |
+80  | pub use chains::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:139:14
+    |
+139 | use chains::{ChainManager, SharedChainManager};
+    |              ^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:139:28
+    |
+139 | use chains::{ChainManager, SharedChainManager};
+    |                            ^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedChainManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:80:9
+    |
+80  | pub use chains::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:139:28
+    |
+139 | use chains::{ChainManager, SharedChainManager};
+    |                            ^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:142:32
+    |
+142 | use config::settings_manager::{SettingsManager, SharedSettingsManager};
+    |                                ^^^^^^^^^^^^^^^
+    |
+note: the name `SettingsManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:77:9
+    |
+77  | pub use backup::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:142:32
+    |
+142 | use config::settings_manager::{SettingsManager, SharedSettingsManager};
+    |                                ^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:142:49
+    |
+142 | use config::settings_manager::{SettingsManager, SharedSettingsManager};
+    |                                                 ^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedSettingsManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:84:9
+    |
+84  | pub use config::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:142:49
+    |
+142 | use config::settings_manager::{SettingsManager, SharedSettingsManager};
+    |                                                 ^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:143:27
+    |
+143 | use core::cache_manager::{CacheType, SharedCacheManager};
+    |                           ^^^^^^^^^
+    |
+note: the name `CacheType` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:85:9
+    |
+85  | pub use core::*;
+    |         ^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:143:27
+    |
+143 | use core::cache_manager::{CacheType, SharedCacheManager};
+    |                           ^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:143:38
+    |
+143 | use core::cache_manager::{CacheType, SharedCacheManager};
+    |                                      ^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedCacheManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:85:9
+    |
+85  | pub use core::*;
+    |         ^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:143:38
+    |
+143 | use core::cache_manager::{CacheType, SharedCacheManager};
+    |                                      ^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:144:25
+    |
+144 | use data::event_store::{EventStore, SharedEventStore};
+    |                         ^^^^^^^^^^
+    |
+note: the name `EventStore` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:86:9
+    |
+86  | pub use data::*;
+    |         ^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:144:25
+    |
+144 | use data::event_store::{EventStore, SharedEventStore};
+    |                         ^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:144:37
+    |
+144 | use data::event_store::{EventStore, SharedEventStore};
+    |                                     ^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedEventStore` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:86:9
+    |
+86  | pub use data::*;
+    |         ^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:144:37
+    |
+144 | use data::event_store::{EventStore, SharedEventStore};
+    |                                     ^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:145:24
+    |
+145 | use data::historical::{HistoricalReplayManager, SharedHistoricalReplayManager};
+    |                        ^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `HistoricalReplayManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:86:9
+    |
+86  | pub use data::*;
+    |         ^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:145:24
+    |
+145 | use data::historical::{HistoricalReplayManager, SharedHistoricalReplayManager};
+    |                        ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:145:49
+    |
+145 | use data::historical::{HistoricalReplayManager, SharedHistoricalReplayManager};
+    |                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedHistoricalReplayManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:86:9
+    |
+86  | pub use data::*;
+    |         ^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:145:49
+    |
+145 | use data::historical::{HistoricalReplayManager, SharedHistoricalReplayManager};
+    |                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:146:16
+    |
+146 | use drawings::{DrawingManager, SharedDrawingManager};
+    |                ^^^^^^^^^^^^^^
+    |
+note: the name `DrawingManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:89:9
+    |
+89  | pub use drawings::*;
+    |         ^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:146:16
+    |
+146 | use drawings::{DrawingManager, SharedDrawingManager};
+    |                ^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:146:32
+    |
+146 | use drawings::{DrawingManager, SharedDrawingManager};
+    |                                ^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedDrawingManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:89:9
+    |
+89  | pub use drawings::*;
+    |         ^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:146:32
+    |
+146 | use drawings::{DrawingManager, SharedDrawingManager};
+    |                                ^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:148:18
+    |
+148 | use indicators::{IndicatorManager, SharedIndicatorManager};
+    |                  ^^^^^^^^^^^^^^^^
+    |
+note: the name `IndicatorManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:93:9
+    |
+93  | pub use indicators::*;
+    |         ^^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:148:18
+    |
+148 | use indicators::{IndicatorManager, SharedIndicatorManager};
+    |                  ^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:148:36
+    |
+148 | use indicators::{IndicatorManager, SharedIndicatorManager};
+    |                                    ^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedIndicatorManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:93:9
+    |
+93  | pub use indicators::*;
+    |         ^^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:148:36
+    |
+148 | use indicators::{IndicatorManager, SharedIndicatorManager};
+    |                                    ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:149:15
+    |
+149 | use journal::{JournalDatabase, SharedJournalDatabase};
+    |               ^^^^^^^^^^^^^^^
+    |
+note: the name `JournalDatabase` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:65:9
+    |
+65  | pub use journal::*;
+    |         ^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:149:15
+    |
+149 | use journal::{JournalDatabase, SharedJournalDatabase};
+    |               ^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:149:32
+    |
+149 | use journal::{JournalDatabase, SharedJournalDatabase};
+    |                                ^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedJournalDatabase` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:65:9
+    |
+65  | pub use journal::*;
+    |         ^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:149:32
+    |
+149 | use journal::{JournalDatabase, SharedJournalDatabase};
+    |                                ^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:150:14
+    |
+150 | use market::{HolderAnalyzer, SharedHolderAnalyzer};
+    |              ^^^^^^^^^^^^^^
+    |
+note: the name `HolderAnalyzer` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:97:9
+    |
+97  | pub use market::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:150:14
+    |
+150 | use market::{HolderAnalyzer, SharedHolderAnalyzer};
+    |              ^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:150:30
+    |
+150 | use market::{HolderAnalyzer, SharedHolderAnalyzer};
+    |                              ^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedHolderAnalyzer` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:97:9
+    |
+97  | pub use market::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:150:30
+    |
+150 | use market::{HolderAnalyzer, SharedHolderAnalyzer};
+    |                              ^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:152:5
+    |
+152 |     MobileAuthManager, MobileSyncManager, MobileTradeEngine, PushNotificationManager,
+    |     ^^^^^^^^^^^^^^^^^
+    |
+note: the name `MobileAuthManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:98:9
+    |
+98  | pub use mobile::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:152:5
+    |
+152 |     MobileAuthManager, MobileSyncManager, MobileTradeEngine, PushNotificationManager,
+    |     ^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:152:24
+    |
+152 |     MobileAuthManager, MobileSyncManager, MobileTradeEngine, PushNotificationManager,
+    |                        ^^^^^^^^^^^^^^^^^
+    |
+note: the name `MobileSyncManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:98:9
+    |
+98  | pub use mobile::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:152:24
+    |
+152 |     MobileAuthManager, MobileSyncManager, MobileTradeEngine, PushNotificationManager,
+    |                        ^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:152:43
+    |
+152 |     MobileAuthManager, MobileSyncManager, MobileTradeEngine, PushNotificationManager,
+    |                                           ^^^^^^^^^^^^^^^^^
+    |
+note: the name `MobileTradeEngine` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:98:9
+    |
+98  | pub use mobile::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:152:43
+    |
+152 |     MobileAuthManager, MobileSyncManager, MobileTradeEngine, PushNotificationManager,
+    |                                           ^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:152:62
+    |
+152 |     MobileAuthManager, MobileSyncManager, MobileTradeEngine, PushNotificationManager,
+    |                                                              ^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `PushNotificationManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:98:9
+    |
+98  | pub use mobile::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:152:62
+    |
+152 |     MobileAuthManager, MobileSyncManager, MobileTradeEngine, PushNotificationManager,
+    |                                                              ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:153:5
+    |
+153 |     SharedMobileAuthManager, SharedMobileSyncManager, SharedPushNotificationManager, WidgetManager,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedMobileAuthManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:98:9
+    |
+98  | pub use mobile::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:153:5
+    |
+153 |     SharedMobileAuthManager, SharedMobileSyncManager, SharedPushNotificationManager, WidgetManager,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:153:30
+    |
+153 |     SharedMobileAuthManager, SharedMobileSyncManager, SharedPushNotificationManager, WidgetManager,
+    |                              ^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedMobileSyncManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:98:9
+    |
+98  | pub use mobile::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:153:30
+    |
+153 |     SharedMobileAuthManager, SharedMobileSyncManager, SharedPushNotificationManager, WidgetManager,
+    |                              ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:153:55
+    |
+153 |     SharedMobileAuthManager, SharedMobileSyncManager, SharedPushNotificationManager, WidgetManager,
+    |                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedPushNotificationManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:98:9
+    |
+98  | pub use mobile::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:153:55
+    |
+153 |     SharedMobileAuthManager, SharedMobileSyncManager, SharedPushNotificationManager, WidgetManager,
+    |                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:153:86
+    |
+153 |     SharedMobileAuthManager, SharedMobileSyncManager, SharedPushNotificationManager, WidgetManager,
+    |                                                                                      ^^^^^^^^^^^^^
+    |
+note: the name `WidgetManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:98:9
+    |
+98  | pub use mobile::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:153:86
+    |
+153 |     SharedMobileAuthManager, SharedMobileSyncManager, SharedPushNotificationManager, WidgetManager,
+    |                                                                                      ^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:155:29
+    |
+155 | use notifications::router::{NotificationRouter, SharedNotificationRouter};
+    |                             ^^^^^^^^^^^^^^^^^^
+    |
+note: the name `NotificationRouter` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:100:9
+    |
+100 | pub use notifications::*;
+    |         ^^^^^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:155:29
+    |
+155 | use notifications::router::{NotificationRouter, SharedNotificationRouter};
+    |                             ^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:155:49
+    |
+155 | use notifications::router::{NotificationRouter, SharedNotificationRouter};
+    |                                                 ^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedNotificationRouter` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:100:9
+    |
+100 | pub use notifications::*;
+    |         ^^^^^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:155:49
+    |
+155 | use notifications::router::{NotificationRouter, SharedNotificationRouter};
+    |                                                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:156:5
+    |
+156 | use p2p::init_p2p_system;
+    |     ^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `init_p2p_system` in the value namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:101:9
+    |
+101 | pub use p2p::*;
+    |         ^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:156:5
+    |
+156 | use p2p::init_p2p_system;
+    |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:158:5
+    |
+158 |     AIPortfolioAdvisor, SharedAIPortfolioAdvisor, SharedWatchlistManager, WatchlistManager,
+    |     ^^^^^^^^^^^^^^^^^^
+    |
+note: the name `AIPortfolioAdvisor` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:102:9
+    |
+102 | pub use portfolio::*;
+    |         ^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:158:5
+    |
+158 |     AIPortfolioAdvisor, SharedAIPortfolioAdvisor, SharedWatchlistManager, WatchlistManager,
+    |     ^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:158:25
+    |
+158 |     AIPortfolioAdvisor, SharedAIPortfolioAdvisor, SharedWatchlistManager, WatchlistManager,
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedAIPortfolioAdvisor` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:102:9
+    |
+102 | pub use portfolio::*;
+    |         ^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:158:25
+    |
+158 |     AIPortfolioAdvisor, SharedAIPortfolioAdvisor, SharedWatchlistManager, WatchlistManager,
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:158:51
+    |
+158 |     AIPortfolioAdvisor, SharedAIPortfolioAdvisor, SharedWatchlistManager, WatchlistManager,
+    |                                                   ^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedWatchlistManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:102:9
+    |
+102 | pub use portfolio::*;
+    |         ^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:158:51
+    |
+158 |     AIPortfolioAdvisor, SharedAIPortfolioAdvisor, SharedWatchlistManager, WatchlistManager,
+    |                                                   ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:158:75
+    |
+158 |     AIPortfolioAdvisor, SharedAIPortfolioAdvisor, SharedWatchlistManager, WatchlistManager,
+    |                                                                           ^^^^^^^^^^^^^^^^
+    |
+note: the name `WatchlistManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:102:9
+    |
+102 | pub use portfolio::*;
+    |         ^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:158:75
+    |
+158 |     AIPortfolioAdvisor, SharedAIPortfolioAdvisor, SharedWatchlistManager, WatchlistManager,
+    |                                                                           ^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:164:23
+    |
+164 | use social::service::{SocialDataService, SharedSocialDataService};
+    |                       ^^^^^^^^^^^^^^^^^
+    |
+note: the name `SocialDataService` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:108:9
+    |
+108 | pub use social::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:164:23
+    |
+164 | use social::service::{SocialDataService, SharedSocialDataService};
+    |                       ^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:164:42
+    |
+164 | use social::service::{SocialDataService, SharedSocialDataService};
+    |                                          ^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedSocialDataService` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:108:9
+    |
+108 | pub use social::*;
+    |         ^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:164:42
+    |
+164 | use social::service::{SocialDataService, SharedSocialDataService};
+    |                                          ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:170:12
+    |
+170 | use tray::{attach_window_listeners, SharedTrayManager, TrayManager};
+    |            ^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `attach_window_listeners` in the value namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:113:9
+    |
+113 | pub use tray::*;
+    |         ^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:170:12
+    |
+170 | use tray::{attach_window_listeners, SharedTrayManager, TrayManager};
+    |            ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:170:37
+    |
+170 | use tray::{attach_window_listeners, SharedTrayManager, TrayManager};
+    |                                     ^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedTrayManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:113:9
+    |
+113 | pub use tray::*;
+    |         ^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:170:37
+    |
+170 | use tray::{attach_window_listeners, SharedTrayManager, TrayManager};
+    |                                     ^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:170:56
+    |
+170 | use tray::{attach_window_listeners, SharedTrayManager, TrayManager};
+    |                                                        ^^^^^^^^^^^
+    |
+note: the name `TrayManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:113:9
+    |
+113 | pub use tray::*;
+    |         ^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:170:56
+    |
+170 | use tray::{attach_window_listeners, SharedTrayManager, TrayManager};
+    |                                                        ^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:171:23
+    |
+171 | use voice::commands::{SharedVoiceState, VoiceState};
+    |                       ^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedVoiceState` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:116:9
+    |
+116 | pub use voice::*;
+    |         ^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:171:23
+    |
+171 | use voice::commands::{SharedVoiceState, VoiceState};
+    |                       ^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:171:41
+    |
+171 | use voice::commands::{SharedVoiceState, VoiceState};
+    |                                         ^^^^^^^^^^
+    |
+note: the name `VoiceState` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:116:9
+    |
+116 | pub use voice::*;
+    |         ^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:171:41
+    |
+171 | use voice::commands::{SharedVoiceState, VoiceState};
+    |                                         ^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:172:5
+    |
+172 | use wallet::hardware_wallet::HardwareWalletState;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `HardwareWalletState` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:117:9
+    |
+117 | pub use wallet::hardware_wallet::*;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:172:5
+    |
+172 | use wallet::hardware_wallet::HardwareWalletState;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:173:5
+    |
+173 | use wallet::ledger::LedgerState;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `LedgerState` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:118:9
+    |
+118 | pub use wallet::ledger::*;
+    |         ^^^^^^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:173:5
+    |
+173 | use wallet::ledger::LedgerState;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:174:5
+    |
+174 | use wallet::multi_wallet::MultiWalletManager;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `MultiWalletManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:119:9
+    |
+119 | pub use wallet::multi_wallet::*;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:174:5
+    |
+174 | use wallet::multi_wallet::MultiWalletManager;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:175:24
+    |
+175 | use wallet::multisig::{MultisigDatabase, SharedMultisigDatabase};
+    |                        ^^^^^^^^^^^^^^^^
+    |
+note: the name `MultisigDatabase` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:124:9
+    |
+124 | pub use wallet::multisig::*;
+    |         ^^^^^^^^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:175:24
+    |
+175 | use wallet::multisig::{MultisigDatabase, SharedMultisigDatabase};
+    |                        ^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:175:42
+    |
+175 | use wallet::multisig::{MultisigDatabase, SharedMultisigDatabase};
+    |                                          ^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedMultisigDatabase` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:124:9
+    |
+124 | pub use wallet::multisig::*;
+    |         ^^^^^^^^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:175:42
+    |
+175 | use wallet::multisig::{MultisigDatabase, SharedMultisigDatabase};
+    |                                          ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:176:5
+    |
+176 | use wallet::operations::WalletOperationsManager;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `WalletOperationsManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:120:9
+    |
+120 | pub use wallet::operations::*;
+    |         ^^^^^^^^^^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:176:5
+    |
+176 | use wallet::operations::WalletOperationsManager;
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:177:27
+    |
+177 | use wallet::performance::{PerformanceDatabase, SharedPerformanceDatabase};
+    |                           ^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `PerformanceDatabase` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:125:9
+    |
+125 | pub use wallet::performance::*;
+    |         ^^^^^^^^^^^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:177:27
+    |
+177 | use wallet::performance::{PerformanceDatabase, SharedPerformanceDatabase};
+    |                           ^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:177:48
+    |
+177 | use wallet::performance::{PerformanceDatabase, SharedPerformanceDatabase};
+    |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedPerformanceDatabase` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:125:9
+    |
+125 | pub use wallet::performance::*;
+    |         ^^^^^^^^^^^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:177:48
+    |
+177 | use wallet::performance::{PerformanceDatabase, SharedPerformanceDatabase};
+    |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:178:23
+    |
+178 | use wallet::phantom::{hydrate_wallet_state, WalletState};
+    |                       ^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `hydrate_wallet_state` in the value namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:121:9
+    |
+121 | pub use wallet::phantom::*;
+    |         ^^^^^^^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:178:23
+    |
+178 | use wallet::phantom::{hydrate_wallet_state, WalletState};
+    |                       ^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:178:45
+    |
+178 | use wallet::phantom::{hydrate_wallet_state, WalletState};
+    |                                             ^^^^^^^^^^^
+    |
+note: the name `WalletState` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:121:9
+    |
+121 | pub use wallet::phantom::*;
+    |         ^^^^^^^^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:178:45
+    |
+178 | use wallet::phantom::{hydrate_wallet_state, WalletState};
+    |                                             ^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:179:16
+    |
+179 | use webhooks::{SharedWebhookManager, WebhookManager};
+    |                ^^^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedWebhookManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:122:9
+    |
+122 | pub use webhooks::*;
+    |         ^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:179:16
+    |
+179 | use webhooks::{SharedWebhookManager, WebhookManager};
+    |                ^^^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:179:38
+    |
+179 | use webhooks::{SharedWebhookManager, WebhookManager};
+    |                                      ^^^^^^^^^^^^^^
+    |
+note: the name `WebhookManager` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:122:9
+    |
+122 | pub use webhooks::*;
+    |         ^^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:179:38
+    |
+179 | use webhooks::{SharedWebhookManager, WebhookManager};
+    |                                      ^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:180:15
+    |
+180 | use updater::{SharedUpdaterState, UpdaterState};
+    |               ^^^^^^^^^^^^^^^^^^
+    |
+note: the name `SharedUpdaterState` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:115:9
+    |
+115 | pub use updater::*;
+    |         ^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:180:15
+    |
+180 | use updater::{SharedUpdaterState, UpdaterState};
+    |               ^^^^^^^^^^^^^^^^^^
+
+warning: private item shadows public glob re-export
+   --> src/lib.rs:180:35
+    |
+180 | use updater::{SharedUpdaterState, UpdaterState};
+    |                                   ^^^^^^^^^^^^
+    |
+note: the name `UpdaterState` in the type namespace is supposed to be publicly re-exported here
+   --> src/lib.rs:115:9
+    |
+115 | pub use updater::*;
+    |         ^^^^^^^^^^
+note: but the private item here shadows it
+   --> src/lib.rs:180:35
+    |
+180 | use updater::{SharedUpdaterState, UpdaterState};
+    |                                   ^^^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+ --> src/backup/service.rs:1:35
+  |
+1 | use aes_gcm::aead::generic_array::GenericArray;
+  |                                   ^^^^^^^^^^^^
+  |
+  = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+   --> src/backup/service.rs:102:37
+    |
+102 |         let cipher = Aes256Gcm::new(GenericArray::from_slice(&key));
+    |                                     ^^^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+   --> src/backup/service.rs:108:22
+    |
+108 |             .encrypt(GenericArray::from_slice(&nonce), data)
+    |                      ^^^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+   --> src/backup/service.rs:131:37
+    |
+131 |         let cipher = Aes256Gcm::new(GenericArray::from_slice(&key));
+    |                                     ^^^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+   --> src/backup/service.rs:141:22
+    |
+141 |             .decrypt(GenericArray::from_slice(&nonce), ciphertext.as_ref())
+    |                      ^^^^^^^^^^^^
+
+warning: use of deprecated function `rand::thread_rng`: Renamed to `rng`
+  --> src/defi/yield_farming.rs:71:29
+   |
+71 |         let mut rng = rand::thread_rng();
+   |                             ^^^^^^^^^^
+
+warning: use of deprecated function `rand::thread_rng`: Renamed to `rng`
+   --> src/defi/yield_farming.rs:143:29
+    |
+143 |         let mut rng = rand::thread_rng();
+    |                             ^^^^^^^^^^
+
+warning: use of deprecated function `rand::thread_rng`: Renamed to `rng`
+   --> src/launchpad/liquidity.rs:171:29
+    |
+171 |         let mut rng = rand::thread_rng();
+    |                             ^^^^^^^^^^
+
+warning: use of deprecated function `rand::thread_rng`: Renamed to `rng`
+   --> src/launchpad/token.rs:180:29
+    |
+180 |         let mut rng = rand::thread_rng();
+    |                             ^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+ --> src/security/keystore.rs:8:35
+  |
+8 | use aes_gcm::aead::generic_array::GenericArray;
+  |                                   ^^^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:122:37
+    |
+122 |         let cipher = Aes256Gcm::new(GenericArray::from_slice(derived_key.as_ref()));
+    |                                     ^^^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:125:22
+    |
+125 |             .encrypt(GenericArray::from_slice(&nonce), secret)
+    |                      ^^^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:167:37
+    |
+167 |         let cipher = Aes256Gcm::new(GenericArray::from_slice(derived_key.as_ref()));
+    |                                     ^^^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:170:22
+    |
+170 |             .decrypt(GenericArray::from_slice(&nonce), ciphertext.as_ref())
+    |                      ^^^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:196:37
+    |
+196 |         let cipher = Aes256Gcm::new(GenericArray::from_slice(derived_key.as_ref()));
+    |                                     ^^^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:199:22
+    |
+199 |             .encrypt(GenericArray::from_slice(&nonce), serialized.as_ref())
+    |                      ^^^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:231:37
+    |
+231 |         let cipher = Aes256Gcm::new(GenericArray::from_slice(derived_key.as_ref()));
+    |                                     ^^^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:234:22
+    |
+234 |             .decrypt(GenericArray::from_slice(&nonce), ciphertext.as_ref())
+    |                      ^^^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:272:41
+    |
+272 |             let cipher = Aes256Gcm::new(GenericArray::from_slice(old_key.as_ref()));
+    |                                         ^^^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:274:26
+    |
+274 |                 .decrypt(GenericArray::from_slice(&nonce), ciphertext.as_ref())
+    |                          ^^^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:283:45
+    |
+283 |             let new_cipher = Aes256Gcm::new(GenericArray::from_slice(new_key_material.as_ref()));
+    |                                             ^^^^^^^^^^^^
+
+warning: use of deprecated struct `sha2::digest::generic_array::GenericArray`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:285:26
+    |
+285 |                 .encrypt(GenericArray::from_slice(&new_nonce), plaintext.as_ref())
+    |                          ^^^^^^^^^^^^
+
+warning: unused variable: `key`
+   --> src/lib.rs:218:28
+    |
+218 |         .warm_cache(keys, |key| async move {
+    |                            ^^^ help: if this is intentional, prefix it with an underscore: `_key`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: unused variable: `token_address`
+   --> src/market/holders.rs:551:9
+    |
+551 |         token_address: &str,
+    |         ^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_token_address`
+
+warning: unused variable: `holder_score`
+   --> src/ai_legacy/launch_predictor.rs:234:13
+    |
+234 |         let holder_score = (features.holder_count as f64 / 1000.0).min(1.0);
+    |             ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_holder_score`
+
+warning: unused variable: `conditions_met`
+   --> src/alerts/price_alerts.rs:498:33
+    |
+498 |             let (would_trigger, conditions_met, message) = self.evaluate_conditions(
+    |                                 ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_conditions_met`
+
+warning: unused variable: `transaction_base64`
+   --> src/api/trading_execution.rs:130:5
+    |
+130 |     transaction_base64: String,
+    |     ^^^^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_transaction_base64`
+
+warning: unused variable: `api_key`
+   --> src/api_config/mod.rs:558:34
+    |
+558 | async fn test_jupiter_connection(api_key: &str) -> Result<(u16, Option<RateLimitInfo>), String> {
+    |                                  ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_api_key`
+
+warning: variable does not need to be mutable
+  --> src/bridges/commands.rs:56:9
+   |
+56 |     let mut transaction = adapter.prepare_transaction(&request).await?;
+   |         ----^^^^^^^^^^^
+   |         |
+   |         help: remove this `mut`
+   |
+   = note: `#[warn(unused_mut)]` on by default
+
+warning: value assigned to `compressed_db_size` is never read
+  --> src/data/compression_commands.rs:76:13
+   |
+76 |     let mut compressed_db_size = 0u64;
+   |             ^^^^^^^^^^^^^^^^^^
+   |
+   = help: maybe it is overwritten before being read?
+   = note: `#[warn(unused_assignments)]` on by default
+
+warning: unused variable: `slippage_bps`
+  --> src/defi/jupiter.rs:26:9
+   |
+26 |         slippage_bps: u16,
+   |         ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_slippage_bps`
+
+warning: unused variable: `lp_position_id`
+  --> src/defi/yield_tracker.rs:26:9
+   |
+26 |         lp_position_id: &str,
+   |         ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_lp_position_id`
+
+warning: unused variable: `token_a_mint`
+  --> src/defi/lp_analyzer.rs:26:9
+   |
+26 |         token_a_mint: &str,
+   |         ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_token_a_mint`
+
+warning: unused variable: `token_b_mint`
+  --> src/defi/lp_analyzer.rs:27:9
+   |
+27 |         token_b_mint: &str,
+   |         ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_token_b_mint`
+
+warning: unused variable: `pool_address`
+  --> src/defi/lp_analyzer.rs:28:9
+   |
+28 |         pool_address: &str,
+   |         ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_pool_address`
+
+warning: unused variable: `settings`
+  --> src/defi/auto_compound.rs:90:13
+   |
+90 |         let settings = match self.get_config(&position.id).await {
+   |             ^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_settings`
+
+warning: unused variable: `app_data_dir`
+   --> src/diagnostics/db_repair.rs:135:9
+    |
+135 |         app_data_dir: &Path,
+    |         ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_app_data_dir`
+
+warning: unused variable: `backup_endpoints`
+   --> src/diagnostics/network_repair.rs:173:13
+    |
+173 |         let backup_endpoints = vec![
+    |             ^^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_backup_endpoints`
+
+warning: unused variable: `bindings`
+   --> src/journal/database.rs:212:17
+    |
+212 |         let mut bindings: Vec<String> = Vec::new();
+    |                 ^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_bindings`
+
+warning: unused variable: `date_range`
+   --> src/journal/database.rs:214:21
+    |
+214 |         if let Some(date_range) = &filters.date_range {
+    |                     ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_date_range`
+
+warning: unused variable: `min_confidence`
+   --> src/journal/database.rs:226:21
+    |
+226 |         if let Some(min_confidence) = filters.min_confidence {
+    |                     ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_min_confidence`
+
+warning: unused variable: `max_confidence`
+   --> src/journal/database.rs:230:21
+    |
+230 |         if let Some(max_confidence) = filters.max_confidence {
+    |                     ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_max_confidence`
+
+warning: unused variable: `search_query`
+   --> src/journal/database.rs:234:21
+    |
+234 |         if let Some(search_query) = &filters.search_query {
+    |                     ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_search_query`
+
+warning: variable does not need to be mutable
+   --> src/journal/database.rs:212:13
+    |
+212 |         let mut bindings: Vec<String> = Vec::new();
+    |             ----^^^^^^^^
+    |             |
+    |             help: remove this `mut`
+
+warning: unused variable: `date_range`
+   --> src/journal/database.rs:277:21
+    |
+277 |         if let Some(date_range) = &filters.date_range {
+    |                     ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_date_range`
+
+warning: unused variable: `min_confidence`
+   --> src/journal/database.rs:289:21
+    |
+289 |         if let Some(min_confidence) = filters.min_confidence {
+    |                     ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_min_confidence`
+
+warning: unused variable: `max_confidence`
+   --> src/journal/database.rs:293:21
+    |
+293 |         if let Some(max_confidence) = filters.max_confidence {
+    |                     ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_max_confidence`
+
+warning: unused variable: `search_query`
+   --> src/journal/database.rs:297:21
+    |
+297 |         if let Some(search_query) = &filters.search_query {
+    |                     ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_search_query`
+
+warning: unused variable: `creator_secret`
+  --> src/launchpad/token.rs:31:13
+   |
+31 |         let creator_secret = keystore
+   |             ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_creator_secret`
+
+warning: unused variable: `metadata`
+  --> src/launchpad/compliance.rs:45:9
+   |
+45 |         metadata: TokenMetadata,
+   |         ^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_metadata`
+
+warning: unused variable: `pubkey`
+  --> src/launchpad/token.rs:84:13
+   |
+84 |         let pubkey = Pubkey::from_str(mint_address)
+   |             ^^^^^^ help: if this is intentional, prefix it with an underscore: `_pubkey`
+
+warning: unused variable: `amount`
+   --> src/launchpad/token.rs:102:9
+    |
+102 |         amount: u64,
+    |         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_amount`
+
+warning: unused variable: `address`
+   --> src/market/mod.rs:159:5
+    |
+159 |     address: String,
+    |     ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_address`
+
+warning: unused variable: `idx`
+   --> src/market/trending_coins.rs:156:16
+    |
+156 |         .map(|(idx, item)| {
+    |                ^^^ help: if this is intentional, prefix it with an underscore: `_idx`
+
+warning: unused variable: `token_address`
+   --> src/market/holders.rs:467:9
+    |
+467 |         token_address: &str,
+    |         ^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_token_address`
+
+error[E0308]: mismatched types
+   --> src/notifications/email.rs:274:33
+    |
+271 |           let mut multipart_builder = MultiPart::alternative();
+    |                                       ------------------------ expected due to this value
+...
+274 |               multipart_builder = multipart_builder.singlepart(
+    |  _________________________________^
+275 | |                 SinglePart::builder()
+276 | |                     .header(header::ContentType::TEXT_PLAIN)
+277 | |                     .body(text),
+278 | |             );
+    | |_____________^ expected `MultiPartBuilder`, found `MultiPart`
+
+error[E0308]: mismatched types
+   --> src/notifications/email.rs:291:33
+    |
+271 |           let mut multipart_builder = MultiPart::alternative();
+    |                                       ------------------------ expected due to this value
+...
+291 |               multipart_builder = multipart_builder.singlepart(
+    |  _________________________________^
+292 | |                 SinglePart::builder()
+293 | |                     .header(header::ContentType::TEXT_HTML)
+294 | |                     .body(html_with_unsubscribe),
+295 | |             );
+    | |_____________^ expected `MultiPartBuilder`, found `MultiPart`
+
+warning: unused variable: `e`
+   --> src/notifications/router.rs:721:17
+    |
+721 |             Err(e) => {
+    |                 ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+warning: unused variable: `err`
+   --> src/portfolio/ai_advisor.rs:108:62
+    |
+108 |         let mut db_path = app.path().app_data_dir().map_err(|err| {
+    |                                                              ^^^ help: if this is intentional, prefix it with an underscore: `_err`
+
+warning: unused variable: `event_type`
+  --> src/security/audit_logger.rs:56:9
+   |
+56 |         event_type: Option<String>,
+   |         ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_event_type`
+
+warning: unused variable: `limit`
+  --> src/security/audit_logger.rs:57:9
+   |
+57 |         limit: usize,
+   |         ^^^^^ help: if this is intentional, prefix it with an underscore: `_limit`
+
+warning: unused variable: `offset`
+  --> src/security/audit_logger.rs:58:9
+   |
+58 |         offset: usize,
+   |         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_offset`
+
+warning: unused variable: `transaction`
+  --> src/security/tx_simulator.rs:19:9
+   |
+19 |         transaction: &str,
+   |         ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_transaction`
+
+warning: unused variable: `transaction`
+  --> src/security/ledger.rs:26:9
+   |
+26 |         transaction: &str,
+   |         ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_transaction`
+
+warning: unused variable: `err`
+   --> src/security/reputation.rs:164:65
+    |
+164 |         let app_dir = app_handle.path().app_data_dir().map_err(|err| {
+    |                                                                 ^^^ help: if this is intentional, prefix it with an underscore: `_err`
+
+warning: unused variable: `token_address`
+   --> src/sentiment/mod.rs:406:36
+    |
+406 | pub async fn fetch_social_mentions(token_address: String) -> Result<Vec<SocialPost>, String> {
+    |                                    ^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_token_address`
+
+warning: unused variable: `limit`
+  --> src/social/strategy_marketplace.rs:21:9
+   |
+21 |         limit: usize,
+   |         ^^^^^ help: if this is intentional, prefix it with an underscore: `_limit`
+
+warning: unused variable: `offset`
+  --> src/social/strategy_marketplace.rs:22:9
+   |
+22 |         offset: usize,
+   |         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_offset`
+
+warning: unused variable: `limit`
+  --> src/social/leaderboard.rs:20:9
+   |
+20 |         limit: usize,
+   |         ^^^^^ help: if this is intentional, prefix it with an underscore: `_limit`
+
+warning: unused variable: `offset`
+  --> src/social/leaderboard.rs:21:9
+   |
+21 |         offset: usize,
+   |         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_offset`
+
+warning: unused variable: `err`
+  --> src/social/service.rs:27:63
+   |
+27 |         let mut data_dir = app.path().app_data_dir().map_err(|err| {
+   |                                                               ^^^ help: if this is intentional, prefix it with an underscore: `_err`
+
+warning: unused variable: `api_key`
+   --> src/stocks/api.rs:117:9
+    |
+117 |         api_key: &str,
+    |         ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_api_key`
+
+warning: unused variable: `threshold`
+   --> src/stocks/commands.rs:185:5
+    |
+185 |     threshold: Option<f64>,
+    |     ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_threshold`
+
+warning: unused variable: `symbol`
+   --> src/stocks/commands.rs:193:31
+    |
+193 | pub async fn get_stock_alerts(symbol: Option<String>) -> Result<Vec<StockAlert>, String> {
+    |                               ^^^^^^ help: if this is intentional, prefix it with an underscore: `_symbol`
+
+warning: variable does not need to be mutable
+   --> src/tax/mod.rs:121:9
+    |
+121 |     let mut calculator = TaxCalculator::new(jurisdiction.clone());
+    |         ----^^^^^^^^^^
+    |         |
+    |         help: remove this `mut`
+
+warning: unused variable: `input_mint`
+  --> src/trading/safety/simulator.rs:66:9
+   |
+66 |         input_mint: &str,
+   |         ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_input_mint`
+
+warning: unused variable: `output_mint`
+  --> src/trading/safety/simulator.rs:67:9
+   |
+67 |         output_mint: &str,
+   |         ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_output_mint`
+
+warning: unused variable: `app`
+   --> src/ui/theme_engine.rs:704:38
+    |
+704 | pub async fn theme_get_os_preference(app: AppHandle) -> Result<String, String> {
+    |                                      ^^^ help: if this is intentional, prefix it with an underscore: `_app`
+
+warning: unused variable: `recipient`
+   --> src/wallet/operations.rs:322:5
+    |
+322 |     recipient: String,
+    |     ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_recipient`
+
+warning: unused variable: `amount`
+   --> src/wallet/operations.rs:323:5
+    |
+323 |     amount: f64,
+    |     ^^^^^^ help: if this is intentional, prefix it with an underscore: `_amount`
+
+warning: unused variable: `input`
+   --> src/wallet/operations.rs:344:5
+    |
+344 |     input: SendTransactionInput,
+    |     ^^^^^ help: if this is intentional, prefix it with an underscore: `_input`
+
+warning: unused variable: `wallet_address`
+   --> src/wallet/operations.rs:345:5
+    |
+345 |     wallet_address: String,
+    |     ^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_wallet_address`
+
+warning: value assigned to `last_log` is never read
+   --> src/webhooks/manager.rs:339:17
+    |
+339 |         let mut last_log = None;
+    |                 ^^^^^^^^
+    |
+    = help: maybe it is overwritten before being read?
+
+warning: unused variable: `app`
+  --> src/windowing/mod.rs:42:27
+   |
+42 | pub async fn get_monitors(app: tauri::AppHandle) -> Result<Vec<MonitorInfo>, String> {
+   |                           ^^^ help: if this is intentional, prefix it with an underscore: `_app`
+
+warning: unused variable: `window`
+  --> src/windowing/mod.rs:99:9
+   |
+99 |     let window = WebviewWindowBuilder::new(&app, &options.window_id, WebviewUrl::App(url.into()))
+   |         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_window`
+
+warning: unused variable: `amount`
+  --> src/p2p/escrow.rs:93:9
+   |
+93 |         amount: f64,
+   |         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_amount`
+
+warning: unused variable: `buyer_pubkey`
+   --> src/p2p/escrow.rs:103:13
+    |
+103 |         let buyer_pubkey = Pubkey::from_str(buyer)?;
+    |             ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_buyer_pubkey`
+
+warning: unused variable: `seller_pubkey`
+   --> src/p2p/escrow.rs:104:13
+    |
+104 |         let seller_pubkey = Pubkey::from_str(seller)?;
+    |             ^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_seller_pubkey`
+
+warning: unused variable: `token_mint_pubkey`
+   --> src/p2p/escrow.rs:105:13
+    |
+105 |         let token_mint_pubkey = Pubkey::from_str(token_mint)?;
+    |             ^^^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_token_mint_pubkey`
+
+warning: unused variable: `from`
+   --> src/p2p/escrow.rs:121:9
+    |
+121 |         from: &str,
+    |         ^^^^ help: if this is intentional, prefix it with an underscore: `_from`
+
+warning: unused variable: `amount`
+   --> src/p2p/escrow.rs:122:9
+    |
+122 |         amount: f64,
+    |         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_amount`
+
+warning: unused variable: `token_mint`
+   --> src/p2p/escrow.rs:123:9
+    |
+123 |         token_mint: &str,
+    |         ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_token_mint`
+
+warning: unused variable: `to`
+   --> src/p2p/escrow.rs:135:9
+    |
+135 |         to: &str,
+    |         ^^ help: if this is intentional, prefix it with an underscore: `_to`
+
+warning: unused variable: `amount`
+   --> src/p2p/escrow.rs:136:9
+    |
+136 |         amount: f64,
+    |         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_amount`
+
+warning: unused variable: `completion_time`
+   --> src/p2p/database.rs:839:9
+    |
+839 |         completion_time: Option<i64>,
+    |         ^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_completion_time`
+
+warning: unused variable: `arbitrator`
+   --> src/p2p/escrow.rs:169:9
+    |
+169 |         arbitrator: &str,
+    |         ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_arbitrator`
+
+warning: unused variable: `release_to`
+   --> src/p2p/escrow.rs:170:9
+    |
+170 |         release_to: &str,
+    |         ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_release_to`
+
+warning: unused variable: `amount`
+   --> src/p2p/escrow.rs:171:9
+    |
+171 |         amount: f64,
+    |         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_amount`
+
+warning: unused variable: `to`
+   --> src/p2p/escrow.rs:148:9
+    |
+148 |         to: &str,
+    |         ^^ help: if this is intentional, prefix it with an underscore: `_to`
+
+warning: unused variable: `amount`
+   --> src/p2p/escrow.rs:149:9
+    |
+149 |         amount: f64,
+    |         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_amount`
+
+warning: unused variable: `disputer`
+   --> src/p2p/escrow.rs:158:61
+    |
+158 |     pub async fn dispute_escrow(&self, escrow_pubkey: &str, disputer: &str) -> Result<String> {
+    |                                                             ^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_disputer`
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> src/backup/service.rs:102:51
+    |
+102 |         let cipher = Aes256Gcm::new(GenericArray::from_slice(&key));
+    |                                                   ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> src/backup/service.rs:108:36
+    |
+108 |             .encrypt(GenericArray::from_slice(&nonce), data)
+    |                                    ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> src/backup/service.rs:131:51
+    |
+131 |         let cipher = Aes256Gcm::new(GenericArray::from_slice(&key));
+    |                                                   ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> src/backup/service.rs:141:36
+    |
+141 |             .decrypt(GenericArray::from_slice(&nonce), ciphertext.as_ref())
+    |                                    ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+  --> src/collab/crypto.rs:30:28
+   |
+30 |         let nonce = Nonce::from_slice(&nonce_bytes);
+   |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+  --> src/collab/crypto.rs:53:28
+   |
+53 |         let nonce = Nonce::from_slice(nonce_bytes);
+   |                            ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:122:51
+    |
+122 |         let cipher = Aes256Gcm::new(GenericArray::from_slice(derived_key.as_ref()));
+    |                                                   ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:125:36
+    |
+125 |             .encrypt(GenericArray::from_slice(&nonce), secret)
+    |                                    ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:167:51
+    |
+167 |         let cipher = Aes256Gcm::new(GenericArray::from_slice(derived_key.as_ref()));
+    |                                                   ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:170:36
+    |
+170 |             .decrypt(GenericArray::from_slice(&nonce), ciphertext.as_ref())
+    |                                    ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:196:51
+    |
+196 |         let cipher = Aes256Gcm::new(GenericArray::from_slice(derived_key.as_ref()));
+    |                                                   ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:199:36
+    |
+199 |             .encrypt(GenericArray::from_slice(&nonce), serialized.as_ref())
+    |                                    ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:231:51
+    |
+231 |         let cipher = Aes256Gcm::new(GenericArray::from_slice(derived_key.as_ref()));
+    |                                                   ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:234:36
+    |
+234 |             .decrypt(GenericArray::from_slice(&nonce), ciphertext.as_ref())
+    |                                    ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:272:55
+    |
+272 |             let cipher = Aes256Gcm::new(GenericArray::from_slice(old_key.as_ref()));
+    |                                                       ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:274:40
+    |
+274 |                 .decrypt(GenericArray::from_slice(&nonce), ciphertext.as_ref())
+    |                                        ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:283:59
+    |
+283 |             let new_cipher = Aes256Gcm::new(GenericArray::from_slice(new_key_material.as_ref()));
+    |                                                           ^^^^^^^^^^
+
+warning: use of deprecated associated function `sha2::digest::generic_array::GenericArray::<T, N>::from_slice`: please upgrade to generic-array 1.x
+   --> src/security/keystore.rs:285:40
+    |
+285 |                 .encrypt(GenericArray::from_slice(&new_nonce), plaintext.as_ref())
+    |                                        ^^^^^^^^^^
+
+error[E0277]: the trait bound `anyhow::Error: StdError` is not satisfied
+   --> src/lib.rs:434:17
+    |
+434 |                 Box::new(e) as Box<dyn Error>
+    |                 ^^^^^^^^^^^ the trait `StdError` is not implemented for `anyhow::Error`
+    |
+    = note: required for the cast from `Box<anyhow::Error>` to `Box<dyn StdError>`
+
+warning: unused import: `sysinfo::CpuExt`
+ --> src/alerts/price_alerts.rs:7:5
+  |
+7 | use sysinfo::CpuExt;
+  |     ^^^^^^^^^^^^^^^
+
+warning: unused import: `Manager`
+ --> src/collab/websocket.rs:6:33
+  |
+6 | use tauri::{AppHandle, Emitter, Manager};
+  |                                 ^^^^^^^
+
+warning: unused import: `Manager`
+  --> src/core/websocket_manager.rs:10:33
+   |
+10 | use tauri::{AppHandle, Emitter, Manager};
+   |                                 ^^^^^^^
+
+warning: unused import: `TimeZone`
+ --> src/data/historical/counterfactual.rs:2:24
+  |
+2 | use chrono::{DateTime, TimeZone, Utc};
+  |                        ^^^^^^^^
+
+warning: unused import: `Manager`
+ --> src/insiders/alert_manager.rs:5:33
+  |
+5 | use tauri::{AppHandle, Emitter, Manager};
+  |                                 ^^^^^^^
+
+warning: unused import: `rand::RngCore`
+ --> src/launchpad/liquidity.rs:5:5
+  |
+5 | use rand::RngCore;
+  |     ^^^^^^^^^^^^^
+
+warning: unused import: `Row`
+ --> src/market/holders.rs:3:18
+  |
+3 | use sqlx::{Pool, Row, Sqlite, SqlitePool};
+  |                  ^^^
+
+warning: unused import: `Manager`
+ --> src/websocket/birdeye.rs:7:33
+  |
+7 | use tauri::{AppHandle, Emitter, Manager};
+  |                                 ^^^^^^^
+
+warning: unused import: `Manager`
+ --> src/websocket/helius.rs:7:33
+  |
+7 | use tauri::{AppHandle, Emitter, Manager};
+  |                                 ^^^^^^^
+
+Some errors have detailed explanations: E0277, E0308.
+For more information about an error, try `rustc --explain E0277`.
+warning: `app` (lib) generated 409 warnings
+error: could not compile `app` (lib) due to 3 previous errors; 409 warnings emitted

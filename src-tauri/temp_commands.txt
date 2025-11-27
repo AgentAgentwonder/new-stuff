@@ -1,0 +1,82 @@
+src\academy\mod.rs:23:    pub async fn new(app_handle: &tauri::AppHandle) -> Result<Self, Box<dyn std::error::Error>> {
+src\api_config.rs:773:pub fn register_api_config_manager(app: &tauri::App) -> Result<(), Box<dyn std::error::Error>> {
+src\auth\mod.rs:15:pub async fn connect_phantom(_app: tauri::AppHandle) -> Result<AuthState, String> {
+src\bots\dca_bot.rs:952:    tauri::async_runtime::spawn(async move {
+src\core\websocket_manager.rs:146:        tauri::async_runtime::spawn(async move {
+src\core\websocket_manager.rs:151:        tauri::async_runtime::spawn(async move {
+src\core\websocket_manager.rs:197:        tauri::async_runtime::spawn(async move {
+src\core\websocket_manager.rs:214:        tauri::async_runtime::spawn(async move {
+src\core\websocket_manager.rs:518:            tauri::async_runtime::spawn(async move {
+src\data\compression_commands.rs:67:pub async fn get_database_size(app_handle: tauri::AppHandle) -> Result<DatabaseSize, String> {
+src\diagnostics\mod.rs:11:pub mod tauri_commands;
+src\diagnostics\tauri_commands.rs:7:pub type SharedDiagnosticsEngine = Arc<RwLock<DiagnosticsEngine>>;
+src\diagnostics\tauri_commands.rs:10:pub async fn run_diagnostics(
+src\diagnostics\tauri_commands.rs:18:pub async fn get_health_report(
+src\diagnostics\tauri_commands.rs:30:pub async fn auto_repair_issue(
+src\diagnostics\tauri_commands.rs:39:pub async fn auto_repair(
+src\diagnostics\tauri_commands.rs:48:pub async fn verify_integrity(
+src\diagnostics\tauri_commands.rs:56:pub async fn manual_repair(
+src\diagnostics\tauri_commands.rs:65:pub async fn download_missing(
+src\diagnostics\tauri_commands.rs:77:pub async fn restore_defaults(
+src\diagnostics\tauri_commands.rs:86:pub async fn get_repair_history(
+src\diagnostics\tauri_commands.rs:94:pub async fn get_diagnostics_settings(
+src\diagnostics\tauri_commands.rs:114:pub async fn save_diagnostics_settings(
+src\diagnostics\tauri_commands.rs:138:pub async fn backup_before_repair(app_handle: tauri::AppHandle) -> Result<String, String> {
+src\diagnostics\tauri_commands.rs:161:pub async fn rollback_repair(
+src\diagnostics\tauri_commands.rs:170:pub async fn export_diagnostics_report(
+src\diagnostics\tauri_commands.rs:195:pub fn initialize_diagnostics_engine(
+src\insiders\wallet_monitor.rs:90:                            tauri::async_runtime::spawn(async move {
+src\insiders\wallet_monitor.rs:526:    tauri::async_runtime::spawn(async move {
+src\insiders\wallet_monitor.rs:531:    tauri::async_runtime::spawn(async move {
+src\lib.rs:268:                tauri::async_runtime::block_on(async { ActivityLogger::new(&app.handle()).await })
+src\lib.rs:277:            let reputation_engine = tauri::async_runtime::block_on(async {
+src\lib.rs:291:                tauri::async_runtime::block_on(async { init_p2p_system(&app.handle()).await })
+src\lib.rs:299:            let academy_engine = tauri::async_runtime::block_on(async {
+src\lib.rs:318:            let api_health_monitor = tauri::async_runtime::block_on(async {
+src\lib.rs:370:            tauri::async_runtime::spawn(async move {
+src\lib.rs:398:            tauri::async_runtime::spawn(async move {
+src\lib.rs:415:            let multisig_db = tauri::async_runtime::block_on(MultisigDatabase::new(
+src\lib.rs:438:                tauri::async_runtime::block_on(PerformanceDatabase::new(performance_db_path))
+src\lib.rs:456:            let journal_db = tauri::async_runtime::block_on(JournalDatabase::new(journal_db_path))
+src\lib.rs:481:            tauri::async_runtime::spawn(async move {
+src\lib.rs:500:            let new_coins_scanner = tauri::async_runtime::block_on(async {
+src\lib.rs:521:            let watchlist_manager = tauri::async_runtime::block_on(async {
+src\lib.rs:537:                tauri::async_runtime::block_on(async { AlertManager::new(&app.handle()).await })
+src\lib.rs:546:            let smart_alert_manager = tauri::async_runtime::block_on(async {
+src\lib.rs:560:            tauri::async_runtime::spawn(async move {
+src\lib.rs:572:            let notification_router = tauri::async_runtime::block_on(async {
+src\lib.rs:601:                tauri::async_runtime::block_on(async { WebhookManager::new(&app.handle()).await })
+src\lib.rs:618:            tauri::async_runtime::spawn(async move {
+src\lib.rs:631:            let social_service = tauri::async_runtime::block_on(async {
+src\lib.rs:653:            let social_cache = tauri::async_runtime::block_on(async {
+src\lib.rs:665:            tauri::async_runtime::block_on(async { analysis_service.initialize().await }).map_err(
+src\lib.rs:693:            let event_store = tauri::async_runtime::block_on(EventStore::new(event_store_path))
+src\lib.rs:711:                tauri::async_runtime::block_on(CompressionManager::new(compression_db_path))
+src\lib.rs:723:                tauri::async_runtime::block_on(async { HolderAnalyzer::new(&app.handle()).await })
+src\lib.rs:738:            let risk_analyzer = tauri::async_runtime::block_on(async {
+src\lib.rs:750:            let ai_advisor = tauri::async_runtime::block_on(async {
+src\lib.rs:762:            let ai_assistant = tauri::async_runtime::block_on(async {
+src\lib.rs:775:                tauri::async_runtime::block_on(async { LaunchPredictor::new(&app.handle()).await })
+src\lib.rs:816:            let historical_replay_manager = tauri::async_runtime::block_on(async {
+src\lib.rs:863:                    tauri::async_runtime::spawn(async move {
+src\lib.rs:877:            tauri::async_runtime::spawn(async move {
+src\lib.rs:928:            tauri::async_runtime::spawn(async move {
+src\lib.rs:984:            tauri::async_runtime::block_on(mobile_auth_manager.load()).map_err(|e| {
+src\market\new_coins_scanner.rs:610:    tauri::async_runtime::spawn(async move {
+src\market\top_coins.rs:532:pub async fn refresh_top_coins(cache: tauri::State<'_, SharedTopCoinsCache>) -> Result<(), String> {
+src\trading\auto_trading.rs:499:pub fn register_auto_trading_state(app: &tauri::App) {
+src\trading\copy_trading.rs:916:    tauri::async_runtime::spawn(async move {
+src\trading\limit_orders.rs:47:    tauri::async_runtime::spawn(async move {
+src\trading\limit_orders.rs:116:pub fn register_trading_state(app: &tauri::App) {
+src\trading\limit_orders.rs:118:    tauri::async_runtime::spawn(async move {
+src\trading\optimizer.rs:73:pub fn register_optimizer_state(app: &tauri::App) {
+src\trading\optimizer.rs:382:    tauri::async_runtime::spawn(async move {
+src\trading\paper_trading.rs:1095:pub fn register_paper_trading_state(app: &tauri::App) {
+src\trading\paper_trading.rs:1097:    tauri::async_runtime::spawn(async move {
+src\tray.rs:397:pub fn attach_window_listeners(window: &tauri::Window, tray_manager: SharedTrayManager) {
+src\updater.rs:206:    tauri::async_runtime::spawn(async move {
+src\updater.rs:207:        tauri::async_runtime::sleep(std::time::Duration::from_secs(1)).await;
+src\windowing.rs:112:pub async fn close_floating_window(app: tauri::AppHandle, window_id: String) -> Result<(), String> {
+src\windowing.rs:264:pub async fn maximize_window(app: tauri::AppHandle, window_id: String) -> Result<(), String> {
+src\windowing.rs:274:pub async fn minimize_window(app: tauri::AppHandle, window_id: String) -> Result<(), String> {
+FINDSTR: /a ignored

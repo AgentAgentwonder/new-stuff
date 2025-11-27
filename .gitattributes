@@ -1,0 +1,8 @@
+. filter=lfs diff=lfs merge=lfs -text
+/eclipse-market-pro filter=lfs diff=lfs merge=lfs -text
+G:/new[[:space:]]project/Eclipse-Market-test/Eclipse-Market-test filter=lfs diff=lfs merge=lfs -text
+<<<<<<< HEAD
+C:/dev/Eclipse-Market-test-main filter=lfs diff=lfs merge=lfs -text
+=======
+>>>>>>> 07b49b31020889e5570b784e71bee039a7dbb079
+C:/dev/eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners/eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners filter=lfs diff=lfs merge=lfs -text

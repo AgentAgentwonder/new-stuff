@@ -1,0 +1,40 @@
+{
+  "testRunner": "jest",
+  "runnerConfig": "./jest.detox.config.js",
+  "apps": {
+    "ios": {
+      "type": "ios.app",
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/EclipseMobile.app",
+      "build": "xcodebuild -workspace ios/EclipseMobile.xcworkspace -scheme EclipseMobile -configuration Debug -sdk iphonesimulator"
+    },
+    "android": {
+      "type": "android.apk",
+      "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+      "build": "cd android && ./gradlew assembleDebug assembleAndroidTest"
+    }
+  },
+  "devices": {
+    "ios.sim": {
+      "type": "ios.simulator",
+      "device": {
+        "type": "iPhone 15"
+      }
+    },
+    "android.emu": {
+      "type": "android.emulator",
+      "device": {
+        "avdName": "Pixel_7_API_34"
+      }
+    }
+  },
+  "configurations": {
+    "ios": {
+      "device": "ios.sim",
+      "app": "ios"
+    },
+    "android": {
+      "device": "android.emu",
+      "app": "android"
+    }
+  }
+}

@@ -1,0 +1,210 @@
+================================================================================
+  ECLIPSE MARKET PRO - FREEZE DIAGNOSIS TEST MODE
+================================================================================
+
+You now have a complete diagnostic system to identify the app freeze.
+
+WHAT YOU CREATED:
+✅ moduleLogger.ts - Tracks module loading in real-time
+✅ main.test.tsx - Test entry point with logging
+✅ App.test.tsx - Minimal app (Dashboard only)
+✅ index-test.html - Test HTML file
+✅ QUICK_START.md - 2-minute quick reference
+✅ FREEZE_DIAGNOSIS.md - Full diagnostic guide
+✅ TEST_CHECKLIST.md - Step-by-step checklist
+✅ test-freeze.sh / test-freeze.bat - Quick launch scripts
+
+================================================================================
+QUICKEST WAY TO START:
+================================================================================
+
+1. Open Terminal/Command Prompt in project root
+2. Run: npm run dev
+3. In browser, go to: http://localhost:1420/index-test.html
+4. Open DevTools Console (F12)
+5. Watch the [MODULE] logs
+6. If app freezes, identify last module that started loading
+7. Follow TEST_CHECKLIST.md to find and fix the problem
+
+================================================================================
+WHAT THE TEST SHOWS:
+================================================================================
+
+Real-time Console Output:
+[MODULE] → Loading: ComponentName          (Loading started)
+[MODULE] ✓ Loaded: ComponentName (123ms)   (Loading finished)
+[MODULE] ✗ Failed: ComponentName - ERROR   (Loading failed)
+
+After 1 second, full report:
+- Total modules loaded
+- Failed modules
+- Slowest modules
+- STILL LOADING section ← THIS IS KEY!
+  Any module in this section = THE FREEZE CULPRIT
+
+================================================================================
+HOW TO USE THE RESULTS:
+================================================================================
+
+SCENARIO A: App Loads Successfully ✅
+→ Problem is in disabled stores or hooks
+→ Open: TEST_CHECKLIST.md Step 3a
+→ Re-enable stores one-by-one
+→ Find which one causes freeze
+
+SCENARIO B: App Freezes with STILL LOADING shown 🔴
+→ That module is the culprit
+→ Open: TEST_CHECKLIST.md Step 3b
+→ Follow the "Found the Problem" section
+→ Apply appropriate fix for that module type
+
+SCENARIO C: Error Message Shown ❌
+→ Check the error details
+→ Verify that module file exists and has no syntax errors
+→ Follow TEST_CHECKLIST.md Step 3c
+
+================================================================================
+SYSTEMATIC TESTING FLOW:
+================================================================================
+
+1. Test Minimal App (Just Dashboard)
+   ↓
+   Freezes? → Find stuck module → Fix it
+   OR
+   Loads? → Continue to Step 2
+   
+2. Enable Stores One-by-One
+   Enable: walletStore → Test
+   Enable: tradingStore → Test  
+   Enable: portfolioStore → Test
+   Enable: aiStore → Test
+   ↓
+   Any freeze? → Fix that store
+   All OK? → Continue to Step 3
+
+3. Enable useTradingEventBridge Hook
+   Enable: in ClientLayout.tsx → Test
+   ↓
+   Freezes? → Fix hook
+   OK? → Continue to Step 4
+
+4. Switch to Full App
+   Change: src/main.test.tsx line 26
+   From: import('./App.test')
+   To: import('./App')
+   → Test with all routes
+   ↓
+   Freezes? → Add routes one-by-one to find problematic page
+   OK? → PROBLEM SOLVED! 🎉
+
+================================================================================
+EXPECTED PROBLEMS & FIXES:
+================================================================================
+
+Static Tauri Import:
+  BAD: import { invoke } from '@tauri-apps/api/core';
+  FIX: const { invoke } = await import('@tauri-apps/api/core');
+
+Module-Level Async Code:
+  BAD: const data = await fetchData();
+  FIX: export async function getData() { return await fetchData(); }
+
+Circular Imports:
+  BAD: a.ts → b.ts → a.ts (creates deadlock)
+  FIX: Refactor imports or use lazy imports
+
+Storage Access at Load:
+  BAD: const value = localStorage.getItem('key');
+  FIX: export const getValue = () => localStorage.getItem('key');
+
+Heavy Library Import:
+  BAD: import * from 'hugeLibrary'; (at module level)
+  FIX: const { Component } = await import('hugeLibrary'); (in useEffect)
+
+================================================================================
+KEY FILES TO CHECK IF PROBLEMS:
+================================================================================
+
+If store freeze:
+  src/store/walletStore.ts
+  src/store/tradingStore.ts
+  src/store/portfolioStore.ts
+  src/store/aiStore.ts
+  → Look for static Tauri imports and module-level async code
+
+If hook freeze:
+  src/hooks/useTradingEventBridge.ts
+  → Verify all async code is inside useEffect
+
+If component freeze:
+  src/layouts/ClientLayout.tsx
+  src/components/sidebar.tsx
+  src/components/providers/AccessibilityProvider.tsx
+  → Check imports for heavy libraries or blocking code
+
+If page freeze:
+  src/pages/[PageName].tsx
+  → Look for heavy imports (recharts, etc.)
+  → Move to dynamic imports
+
+================================================================================
+TIPS FOR SUCCESS:
+================================================================================
+
+✓ Watch the [MODULE] logs carefully - they tell the whole story
+✓ Only change ONE thing per test run
+✓ Hard refresh browser (Ctrl+Shift+R) between tests
+✓ Check your code changes are saved before refreshing
+✓ Module taking 500ms to load is OK, as long as it finishes
+✓ Look for STILL LOADING - that's where the freeze is
+✓ If still stuck after module finishes loading, look for runtime errors
+
+================================================================================
+GETTING HELP:
+================================================================================
+
+Need to see what's happening?
+  → Open DevTools Console (F12)
+  → Look at [MODULE] logs
+  → Copy the STILL LOADING section from error report
+
+Need to check a specific module?
+  → Find it in src/ directory
+  → Check first 20 lines for suspicious imports/code
+  → Look for patterns in "EXPECTED PROBLEMS" section above
+
+Not sure what to fix?
+  → Share the module name
+  → Share the full error message
+  → Share what the module is trying to do
+  → Someone can point you to the exact fix
+
+================================================================================
+REMEMBER:
+================================================================================
+
+The test version is MINIMAL and SAFE:
+- Only loads Dashboard route
+- Disabled stores that might have issues
+- Disabled trading event bridge hook
+- Focuses on core app initialization
+
+Once you identify and fix the problem here, the full app will work too!
+
+================================================================================
+START TESTING NOW:
+================================================================================
+
+Terminal:
+  $ npm run dev
+
+Browser:
+  http://localhost:1420/index-test.html
+
+DevTools:
+  F12 (or Cmd+Option+I on Mac)
+
+Check console for [MODULE] logs and watch for freeze point!
+
+Good luck! 🚀
+================================================================================

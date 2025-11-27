@@ -1,0 +1,7 @@
+token_address,gini_coefficient,top_10_percentage,total_holders,liquidity_usd,has_mint_authority,has_freeze_authority,verified,audited,community_trust_score,sentiment_score,token_age_days,volume_24h,price_volatility,is_rug_pull
+rug1,0.92,88.0,85,15000.0,1,1,0,0,0.2,-0.4,2.0,8000.0,52.0,1
+rug2,0.87,80.0,120,22000.0,1,0,0,0,0.35,-0.1,5.0,12000.0,46.0,1
+legit1,0.42,32.0,5400,450000.0,0,0,1,1,0.82,0.6,210.0,320000.0,12.0,0
+legit2,0.28,18.0,12000,1250000.0,0,0,1,1,0.93,0.7,390.0,580000.0,8.0,0
+midrisk1,0.61,48.0,950,76000.0,0,1,0,0,0.55,0.1,23.0,42000.0,28.0,1
+legit3,0.36,24.0,8300,980000.0,0,0,1,0,0.88,0.5,175.0,410000.0,14.0,0

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.tauri.app/config.json",
+  "identifier": "com.eclipse.market.pro.test",
+  "productName": "Eclipse Market Pro - Test",
+  "version": "1.0.0",
+  "bundle": {
+    "active": true,
+    "category": "Finance",
+    "icon": [
+      "../src-tauri/icons/32x32.png",
+      "../src-tauri/icons/128x128.png",
+      "../src-tauri/icons/128x128@2x.png",
+      "../src-tauri/icons/icon.icns",
+      "../src-tauri/icons/icon.ico"
+    ],
+    "targets": "all"
+  },
+  "build": {
+    "beforeDevCommand": "echo 'Skipping dev command'",
+    "beforeBuildCommand": "echo 'Skipping build command'",
+    "devUrl": "http://localhost:1420",
+    "frontendDist": "../src-minimal"
+  },
+  "security": {
+    "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' http://localhost:1420 https: wss:; frame-ancestors 'none';"
+  },
+  "windows": [
+    {
+      "label": "main",
+      "fullscreen": false,
+      "resizable": true,
+      "title": "Eclipse Market Pro - Test",
+      "width": 800,
+      "height": 600,
+      "minWidth": 600,
+      "minHeight": 400,
+      "visible": true,
+      "decorations": true,
+      "shadow": true,
+      "skipTaskbar": false
+    }
+  ],
+  "plugins": {}
+}

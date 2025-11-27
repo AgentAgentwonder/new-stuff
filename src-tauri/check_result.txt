@@ -1,0 +1,759 @@
+    Checking app v0.1.0 (/home/engine/project/src-tauri)
+error: proc-macro derive panicked
+  --> src/bots/dca_bot.rs:77:48
+   |
+77 | #[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
+   |                                                ^^^^^^^
+   |
+   = help: message: called `Result::unwrap()` on an `Err` value: Error("expected identifier")
+
+error: proc-macro derive panicked
+ --> src/insiders/types.rs:7:48
+  |
+7 | #[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
+  |                                                ^^^^^^^
+  |
+  = help: message: called `Result::unwrap()` on an `Err` value: Error("expected identifier")
+
+error: proc-macro derive panicked
+   --> src/insiders/types.rs:113:48
+    |
+113 | #[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
+    |                                                ^^^^^^^
+    |
+    = help: message: called `Result::unwrap()` on an `Err` value: Error("expected identifier")
+
+error: proc-macro derive panicked
+  --> src/trading/copy_trading.rs:13:48
+   |
+13 | #[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
+   |                                                ^^^^^^^
+   |
+   = help: message: called `Result::unwrap()` on an `Err` value: Error("expected identifier")
+
+error: proc-macro derive panicked
+  --> src/trading/copy_trading.rs:37:48
+   |
+37 | #[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
+   |                                                ^^^^^^^
+   |
+   = help: message: called `Result::unwrap()` on an `Err` value: Error("expected identifier")
+
+error: proc-macro derive panicked
+  --> src/trading/paper_trading.rs:22:48
+   |
+22 | #[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
+   |                                                ^^^^^^^
+   |
+   = help: message: called `Result::unwrap()` on an `Err` value: Error("expected identifier")
+
+error: proc-macro derive panicked
+  --> src/trading/paper_trading.rs:33:48
+   |
+33 | #[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
+   |                                                ^^^^^^^
+   |
+   = help: message: called `Result::unwrap()` on an `Err` value: Error("expected identifier")
+
+error: proc-macro derive panicked
+  --> src/trading/paper_trading.rs:63:48
+   |
+63 | #[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
+   |                                                ^^^^^^^
+   |
+   = help: message: called `Result::unwrap()` on an `Err` value: Error("expected identifier")
+
+error: proc-macro derive panicked
+  --> src/trading/types.rs:71:48
+   |
+71 | #[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
+   |                                                ^^^^^^^
+   |
+   = help: message: called `Result::unwrap()` on an `Err` value: Error("expected identifier")
+
+error: proc-macro derive panicked
+  --> src/wallet/performance.rs:12:48
+   |
+12 | #[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
+   |                                                ^^^^^^^
+   |
+   = help: message: called `Result::unwrap()` on an `Err` value: Error("expected identifier")
+
+error: proc-macro derive panicked
+  --> src/wallet/performance.rs:31:48
+   |
+31 | #[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
+   |                                                ^^^^^^^
+   |
+   = help: message: called `Result::unwrap()` on an `Err` value: Error("expected identifier")
+
+error: proc macro panicked
+    --> src/lib.rs:1891:14
+     |
+1891 |         .run(tauri::generate_context!())
+     |              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+     |
+     = help: message: The `frontendDist` configuration is set to `"../dist"` but this path doesn't exist
+
+error: `self` parameter is only allowed in associated functions
+  --> src/websocket/helius.rs:51:13
+   |
+51 |             &self,
+   |             ^^^^^ not semantically valid as function parameter
+   |
+   = note: associated functions are those in `impl` or `trait` definitions
+
+error: `self` parameter is only allowed in associated functions
+   --> src/websocket/helius.rs:171:34
+    |
+171 |         async fn process_message(&self, value: serde_json::Value) {
+    |                                  ^^^^^ not semantically valid as function parameter
+    |
+    = note: associated functions are those in `impl` or `trait` definitions
+
+error: `self` parameter is only allowed in associated functions
+   --> src/websocket/helius.rs:187:13
+    |
+187 |             &self,
+    |             ^^^^^ not semantically valid as function parameter
+    |
+    = note: associated functions are those in `impl` or `trait` definitions
+
+error: `self` parameter is only allowed in associated functions
+   --> src/websocket/helius.rs:229:38
+    |
+229 |         async fn update_last_message(&self) {
+    |                                      ^^^^^ not semantically valid as function parameter
+    |
+    = note: associated functions are those in `impl` or `trait` definitions
+
+error: `self` parameter is only allowed in associated functions
+   --> src/websocket/helius.rs:234:34
+    |
+234 |         async fn increment_stats(&self, bytes: usize) {
+    |                                  ^^^^^ not semantically valid as function parameter
+    |
+    = note: associated functions are those in `impl` or `trait` definitions
+
+error[E0432]: unresolved import `tauri::notification`
+ --> src/tray/mod.rs:9:5
+  |
+9 |     notification::Notification,
+  |     ^^^^^^^^^^^^ could not find `notification` in `tauri`
+
+error[E0432]: unresolved import `tauri::WindowUrl`
+ --> src/windowing/mod.rs:2:77
+  |
+2 | use tauri::{Manager, PhysicalPosition, PhysicalSize, Window, WindowBuilder, WindowUrl};
+  |                                                                             ^^^^^^^^^
+  |                                                                             |
+  |                                                                             no `WindowUrl` in the root
+  |                                                                             help: a similar name exists in the module: `Window`
+
+error: cannot find macro `__cmd__execute_voice_trade` in this scope
+    --> src/lib.rs:1729:13
+     |
+1729 |             execute_voice_trade,
+     |             ^^^^^^^^^^^^^^^^^^^ help: a macro with a similar name exists: `__cmd__execute_paper_trade`
+     |
+    ::: src/trading/paper_trading.rs:1064:1
+     |
+1064 | #[tauri::command]
+     | ----------------- similarly named macro `__cmd__execute_paper_trade` defined here
+
+error: cannot find macro `__cmd__get_portfolio_data` in this scope
+    --> src/lib.rs:1730:13
+     |
+1730 |             get_portfolio_data,
+     |             ^^^^^^^^^^^^^^^^^^ help: a macro with a similar name exists: `__cmd__get_portfolio_metrics`
+     |
+    ::: src/portfolio/rebalancer.rs:449:1
+     |
+449  | #[tauri::command]
+     | ----------------- similarly named macro `__cmd__get_portfolio_metrics` defined here
+
+error: cannot find macro `__cmd__get_current_price` in this scope
+    --> src/lib.rs:1731:13
+     |
+1731 |             get_current_price,
+     |             ^^^^^^^^^^^^^^^^^ help: a macro with a similar name exists: `__cmd__get_coin_price`
+     |
+    ::: src/market/mod.rs:141:1
+     |
+141  | #[tauri::command]
+     | ----------------- similarly named macro `__cmd__get_coin_price` defined here
+
+error: cannot find macro `__cmd__create_price_alert` in this scope
+    --> src/lib.rs:1732:13
+     |
+1732 |             create_price_alert,
+     |             ^^^^^^^^^^^^^^^^^^ help: a macro with a similar name exists: `__cmd__create_stock_alert`
+     |
+    ::: src/stocks/commands.rs:181:1
+     |
+181  | #[tauri::command]
+     | ----------------- similarly named macro `__cmd__create_stock_alert` defined here
+
+error: cannot find macro `__cmd__list_alerts` in this scope
+    --> src/lib.rs:1733:13
+     |
+1733 |             list_alerts,
+     |             ^^^^^^^^^^^ help: a macro with a similar name exists: `__cmd__list_backups`
+     |
+    ::: src/backup/service.rs:504:1
+     |
+504  | #[tauri::command]
+     | ----------------- similarly named macro `__cmd__list_backups` defined here
+
+error: cannot find macro `__cmd__get_market_summary` in this scope
+    --> src/lib.rs:1734:13
+     |
+1734 |             get_market_summary,
+     |             ^^^^^^^^^^^^^^^^^^ help: a macro with a similar name exists: `__cmd__get_tax_center_summary`
+     |
+    ::: src/tax/mod.rs:111:1
+     |
+111  | #[tauri::command]
+     | ----------------- similarly named macro `__cmd__get_tax_center_summary` defined here
+
+error: cannot find macro `__cmd__synthesize_speech` in this scope
+    --> src/lib.rs:1735:13
+     |
+1735 |             synthesize_speech,
+     |             ^^^^^^^^^^^^^^^^^
+
+error: cannot find macro `__cmd__validate_voice_mfa` in this scope
+    --> src/lib.rs:1736:13
+     |
+1736 |             validate_voice_mfa,
+     |             ^^^^^^^^^^^^^^^^^^
+
+error: cannot find macro `__cmd__check_voice_permission` in this scope
+    --> src/lib.rs:1737:13
+     |
+1737 |             check_voice_permission,
+     |             ^^^^^^^^^^^^^^^^^^^^^^ help: a macro with a similar name exists: `__cmd__voice_revoke_permissions`
+     |
+    ::: src/voice/commands.rs:47:1
+     |
+47   | #[tauri::command]
+     | ----------------- similarly named macro `__cmd__voice_revoke_permissions` defined here
+
+error: cannot find macro `__cmd__get_voice_capabilities` in this scope
+    --> src/lib.rs:1738:13
+     |
+1738 |             get_voice_capabilities,
+     |             ^^^^^^^^^^^^^^^^^^^^^^
+
+error: cannot find attribute `sqlx` in this scope
+   --> src/wallet/performance.rs:108:7
+    |
+108 |     #[sqlx(try_from = "crate::utils::Rfc3339DateTime")]
+    |       ^^^^
+    |
+    = note: `sqlx` is in scope, but it is a crate, not an attribute
+
+error[E0106]: missing lifetime specifier
+  --> src/collab/state.rs:58:36
+   |
+58 | pub type CollabStateHandle = State<'_, CollabState>;
+   |                                    ^^ expected named lifetime parameter
+   |
+help: consider introducing a named lifetime parameter
+   |
+58 | pub type CollabStateHandle<'a> = State<'a, CollabState>;
+   |                           ++++         ~~
+
+error[E0401]: can't use generic parameters from outer item
+  --> src/websocket/helius.rs:51:14
+   |
+20 | impl HeliusStream {
+   | ---- `Self` type implicitly declared here, by this `impl`
+...
+51 |             &self,
+   |              ^^^^
+   |              |
+   |              use of generic parameter from outer item
+   |              refer to the type directly here instead
+
+error[E0401]: can't use generic parameters from outer item
+   --> src/websocket/helius.rs:171:35
+    |
+20  | impl HeliusStream {
+    | ---- `Self` type implicitly declared here, by this `impl`
+...
+171 |         async fn process_message(&self, value: serde_json::Value) {
+    |                                   ^^^^
+    |                                   |
+    |                                   use of generic parameter from outer item
+    |                                   refer to the type directly here instead
+
+error[E0401]: can't use generic parameters from outer item
+   --> src/websocket/helius.rs:187:14
+    |
+20  | impl HeliusStream {
+    | ---- `Self` type implicitly declared here, by this `impl`
+...
+187 |             &self,
+    |              ^^^^
+    |              |
+    |              use of generic parameter from outer item
+    |              refer to the type directly here instead
+
+error[E0401]: can't use generic parameters from outer item
+   --> src/websocket/helius.rs:229:39
+    |
+20  | impl HeliusStream {
+    | ---- `Self` type implicitly declared here, by this `impl`
+...
+229 |         async fn update_last_message(&self) {
+    |                                       ^^^^
+    |                                       |
+    |                                       use of generic parameter from outer item
+    |                                       refer to the type directly here instead
+
+error[E0401]: can't use generic parameters from outer item
+   --> src/websocket/helius.rs:234:35
+    |
+20  | impl HeliusStream {
+    | ---- `Self` type implicitly declared here, by this `impl`
+...
+234 |         async fn increment_stats(&self, bytes: usize) {
+    |                                   ^^^^
+    |                                   |
+    |                                   use of generic parameter from outer item
+    |                                   refer to the type directly here instead
+
+error[E0433]: failed to resolve: could not find `TopCoinsCache` in `market`
+   --> src/lib.rs:516:46
+    |
+516 |                 Arc::new(RwLock::new(market::TopCoinsCache::new()));
+    |                                              ^^^^^^^^^^^^^ could not find `TopCoinsCache` in `market`
+
+error[E0425]: cannot find value `smart_money_sentiment` in this scope
+   --> src/insiders/smart_money.rs:483:13
+    |
+483 |             smart_money_sentiment,
+    |             ^^^^^^^^^^^^^^^^^^^^^ help: a local variable with a similar name exists: `smart_sentiment`
+
+error[E0412]: cannot find type `EventHandler` in crate `tauri`
+  --> src/insiders/wallet_monitor.rs:24:57
+   |
+24 |     event_handler: Arc<tokio::sync::Mutex<Option<tauri::EventHandler>>>,
+   |                                                         ^^^^^^^^^^^^ not found in `tauri`
+
+error[E0412]: cannot find type `TopCoinsCache` in this scope
+  --> src/market/top_coins.rs:27:6
+   |
+27 | impl TopCoinsCache {
+   |      ^^^^^^^^^^^^^ not found in this scope
+
+error[E0422]: cannot find struct, variant or union type `CacheEntry` in this scope
+  --> src/market/top_coins.rs:65:23
+   |
+65 |         *cache = Some(CacheEntry {
+   |                       ^^^^^^^^^^ not found in this scope
+   |
+help: consider importing this struct through its public re-export
+   |
+1  + use crate::CacheEntry;
+   |
+
+error[E0412]: cannot find type `TopCoinsCache` in this scope
+   --> src/market/top_coins.rs:265:43
+    |
+265 | pub type SharedTopCoinsCache = Arc<RwLock<TopCoinsCache>>;
+    |                                           ^^^^^^^^^^^^^ not found in this scope
+    |
+help: you might be missing a type parameter
+    |
+265 | pub type SharedTopCoinsCache<TopCoinsCache> = Arc<RwLock<TopCoinsCache>>;
+    |                             +++++++++++++++
+
+error[E0425]: cannot find value `session_data` in this scope
+   --> src/wallet/phantom.rs:506:36
+    |
+181 | fn session_path(app: &AppHandle) -> Result<PathBuf, PhantomError> {
+    | ----------------------------------------------------------------- similarly named function `session_path` defined here
+...
+506 |     let pubkey = Pubkey::from_str(&session_data.public_key).map_err(|err| {
+    |                                    ^^^^^^^^^^^^ help: a function with a similar name exists: `session_path`
+
+error[E0425]: cannot find function `session_create` in this scope
+    --> src/lib.rs:1098:13
+     |
+1098 |             session_create,
+     |             ^^^^^^^^^^^^^^ not found in this scope
+     |
+help: consider importing this function
+     |
+58   + use crate::session_manager::session_create;
+     |
+
+error[E0425]: cannot find function `session_renew` in this scope
+    --> src/lib.rs:1099:13
+     |
+1099 |             session_renew,
+     |             ^^^^^^^^^^^^^ not found in this scope
+     |
+help: consider importing this function
+     |
+58   + use crate::session_manager::session_renew;
+     |
+
+error[E0425]: cannot find function `session_end` in this scope
+    --> src/lib.rs:1100:13
+     |
+1100 |             session_end,
+     |             ^^^^^^^^^^^ not found in this scope
+     |
+help: consider importing this function
+     |
+58   + use crate::session_manager::session_end;
+     |
+
+error[E0425]: cannot find function `session_status` in this scope
+    --> src/lib.rs:1101:13
+     |
+1101 |             session_status,
+     |             ^^^^^^^^^^^^^^ not found in this scope
+     |
+help: consider importing this function
+     |
+58   + use crate::session_manager::session_status;
+     |
+
+error[E0425]: cannot find function `session_verify` in this scope
+    --> src/lib.rs:1102:13
+     |
+1102 |             session_verify,
+     |             ^^^^^^^^^^^^^^ not found in this scope
+     |
+help: consider importing this function
+     |
+58   + use crate::session_manager::session_verify;
+     |
+
+error[E0425]: cannot find function `session_update_activity` in this scope
+    --> src/lib.rs:1103:13
+     |
+1103 |             session_update_activity,
+     |             ^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+     |
+help: consider importing this function
+     |
+58   + use crate::session_manager::session_update_activity;
+     |
+
+error[E0425]: cannot find function `session_configure_timeout` in this scope
+    --> src/lib.rs:1104:13
+     |
+1104 |             session_configure_timeout,
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+     |
+help: consider importing this function
+     |
+58   + use crate::session_manager::session_configure_timeout;
+     |
+
+error[E0425]: cannot find function `two_factor_enroll` in this scope
+    --> src/lib.rs:1106:13
+     |
+1106 |             two_factor_enroll,
+     |             ^^^^^^^^^^^^^^^^^ not found in this scope
+     |
+help: consider importing this function
+     |
+58   + use crate::two_factor::two_factor_enroll;
+     |
+
+error[E0425]: cannot find function `two_factor_verify` in this scope
+    --> src/lib.rs:1107:13
+     |
+1107 |             two_factor_verify,
+     |             ^^^^^^^^^^^^^^^^^ not found in this scope
+     |
+help: consider importing this function
+     |
+58   + use crate::two_factor::two_factor_verify;
+     |
+
+error[E0425]: cannot find function `two_factor_disable` in this scope
+    --> src/lib.rs:1108:13
+     |
+1108 |             two_factor_disable,
+     |             ^^^^^^^^^^^^^^^^^^ not found in this scope
+     |
+help: consider importing this function
+     |
+58   + use crate::two_factor::two_factor_disable;
+     |
+
+error[E0425]: cannot find function `two_factor_status` in this scope
+    --> src/lib.rs:1109:13
+     |
+1109 |             two_factor_status,
+     |             ^^^^^^^^^^^^^^^^^ not found in this scope
+     |
+help: consider importing this function
+     |
+58   + use crate::two_factor::two_factor_status;
+     |
+
+error[E0425]: cannot find function `two_factor_regenerate_backup_codes` in this scope
+    --> src/lib.rs:1110:13
+     |
+1110 |             two_factor_regenerate_backup_codes,
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+     |
+help: consider importing this function
+     |
+58   + use crate::two_factor::two_factor_regenerate_backup_codes;
+     |
+
+warning: unused import: `std::path::PathBuf`
+ --> src/academy/content.rs:4:5
+  |
+4 | use std::path::PathBuf;
+  |     ^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `AppHandle`
+ --> src/ai/launch_predictor/inference.rs:3:13
+  |
+3 | use tauri::{AppHandle, State};
+  |             ^^^^^^^^^
+
+warning: unused import: `LaunchPredictor`
+ --> src/ai/launch_predictor/inference.rs:5:35
+  |
+5 | use crate::ai::launch_predictor::{LaunchPredictor, SharedLaunchPredictor, TokenFeatures};
+  |                                   ^^^^^^^^^^^^^^^
+
+warning: unused import: `DateTime`
+ --> src/ai.rs:5:14
+  |
+5 | use chrono::{DateTime, Utc};
+  |              ^^^^^^^^
+
+warning: unused import: `uuid::Uuid`
+  --> src/ai.rs:12:5
+   |
+12 | use uuid::Uuid;
+   |     ^^^^^^^^^^
+
+warning: unused import: `Manager`
+ --> src/ai_chat/mod.rs:2:33
+  |
+2 | use tauri::{AppHandle, Emitter, Manager};
+  |                                 ^^^^^^^
+
+warning: unused import: `Timelike`
+ --> src/alerts/logic/conditions.rs:1:35
+  |
+1 | use chrono::{Datelike, NaiveTime, Timelike, Utc};
+  |                                   ^^^^^^^^
+
+warning: unused import: `Permission`
+ --> src/alerts/logic/manager.rs:4:37
+  |
+4 | use super::rule_engine::{AlertRule, Permission, RuleExecutionResult, RuleNode, SharedAccess};
+  |                                     ^^^^^^^^^^
+
+warning: unused import: `ActionExecutionContext`
+ --> src/alerts/logic/rule_engine.rs:1:30
+  |
+1 | use super::actions::{Action, ActionExecutionContext, ActionExecutionResult};
+  |                              ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `std::collections::HashMap`
+ --> src/alerts/price_alerts.rs:4:5
+  |
+4 | use std::collections::HashMap;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: ambiguous glob re-exports
+ --> src/alerts/mod.rs:4:9
+  |
+4 | pub use logic::*;
+  |         ^^^^^^^^ the name `LogicalOperator` in the type namespace is first re-exported here
+5 | pub use price_alerts::*;
+  |         --------------- but the name `LogicalOperator` in the type namespace is also re-exported here
+  |
+  = note: `#[warn(ambiguous_glob_reexports)]` on by default
+
+warning: unused imports: `debug`, `warn`
+  --> src/api/jupiter.rs:10:15
+   |
+10 | use tracing::{debug, instrument, warn};
+   |               ^^^^^              ^^^^
+
+warning: private item shadows public glob re-export
+  --> src/lib.rs:9:1
+   |
+9  | mod auth;
+   | ^^^^^^^^^
+   |
+note: the name `auth` in the type namespace is supposed to be publicly re-exported here
+  --> src/lib.rs:91:9
+   |
+91 | pub use mobile::*;
+   |         ^^^^^^^^^
+note: but the private item here shadows it
+  --> src/lib.rs:9:1
+   |
+9  | mod auth;
+   | ^^^^^^^^^
+   = note: `#[warn(hidden_glob_reexports)]` on by default
+
+warning: unused import: `Zeroize`
+ --> src/auth/session_manager.rs:9:15
+  |
+9 | use zeroize::{Zeroize, Zeroizing};
+  |               ^^^^^^^
+
+warning: unused import: `BackupScheduler`
+  --> src/backup/service.rs:24:21
+   |
+24 |     BackupSchedule, BackupScheduler, BackupStatus, SchedulerError, SharedBackupScheduler,
+   |                     ^^^^^^^^^^^^^^^
+
+warning: the item `Row` is imported redundantly
+  --> src/bots/dca_bot.rs:48:13
+   |
+8  | use sqlx::{FromRow, Pool, Row, Sqlite, SqlitePool};
+   |                           --- the item `Row` is already imported here
+...
+48 |         use sqlx::Row;
+   |             ^^^^^^^^^
+
+warning: unused imports: `Deserialize`, `Serialize`
+ --> src/bridges/commands.rs:1:13
+  |
+1 | use serde::{Deserialize, Serialize};
+  |             ^^^^^^^^^^^  ^^^^^^^^^
+
+warning: unused imports: `Deserialize`, `Serialize`
+ --> src/bridges/types.rs:2:13
+  |
+2 | use serde::{Deserialize, Serialize};
+  |             ^^^^^^^^^^^  ^^^^^^^^^
+
+warning: unused import: `BridgeProvider`
+ --> src/bridges/types.rs:5:5
+  |
+5 |     BridgeProvider, BridgeQuote, BridgeQuoteRequest, BridgeTransaction, BridgeTransactionRequest,
+  |     ^^^^^^^^^^^^^^
+
+warning: unused import: `CacheManager`
+ --> src/cache_commands/mod.rs:2:5
+  |
+2 |     CacheManager, CacheStatistics, CacheTtlConfig, CacheType, SharedCacheManager, WarmProgress,
+  |     ^^^^^^^^^^^^
+
+warning: unused imports: `Deserialize`, `Serialize`
+ --> src/chains/commands.rs:1:13
+  |
+1 | use serde::{Deserialize, Serialize};
+  |             ^^^^^^^^^^^  ^^^^^^^^^
+
+warning: unused import: `ChainManager`
+ --> src/chains/commands.rs:7:35
+  |
+7 | use super::{ChainConfig, ChainId, ChainManager, SharedChainManager};
+  |                                   ^^^^^^^^^^^^
+
+warning: unused import: `PriceUpdate`
+ --> src/chart_stream/mod.rs:1:51
+  |
+1 | use crate::core::price_engine::{get_price_engine, PriceUpdate};
+  |                                                   ^^^^^^^^^^^
+
+warning: unused import: `Manager`
+ --> src/chart_stream/mod.rs:6:33
+  |
+6 | use tauri::{AppHandle, Emitter, Manager, State};
+  |                                 ^^^^^^^
+
+warning: unused import: `Context`
+ --> src/collab/commands.rs:1:14
+  |
+1 | use anyhow::{Context, Result};
+  |              ^^^^^^^
+
+warning: unused import: `crate::collab::moderation::ModerationManager`
+ --> src/collab/commands.rs:7:5
+  |
+7 | use crate::collab::moderation::ModerationManager;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `default_permissions_for_role`
+ --> src/collab/commands.rs:8:58
+  |
+8 | use crate::collab::permissions::{can_modify_permissions, default_permissions_for_role};
+  |                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: the item `OsRng` is imported redundantly
+  --> src/collab/crypto.rs:66:25
+   |
+2  |     aead::{Aead, KeyInit, OsRng},
+   |                           ----- the item `OsRng` is already imported here
+...
+66 |         password_hash::{rand_core::OsRng, PasswordHasher, SaltString},
+   |                         ^^^^^^^^^^^^^^^^
+
+warning: unused import: `DateTime`
+ --> src/collab/moderation.rs:5:14
+  |
+5 | use chrono::{DateTime, Utc};
+  |              ^^^^^^^^
+
+warning: unused import: `Context`
+ --> src/collab/room.rs:4:22
+  |
+4 | use anyhow::{anyhow, Context, Result};
+  |                      ^^^^^^^
+
+warning: unused import: `Context`
+ --> src/collab/rtc.rs:4:14
+  |
+4 | use anyhow::{Context, Result};
+  |              ^^^^^^^
+
+warning: unused imports: `AppHandle`, `Emitter`, `Manager`
+  --> src/core/price_engine.rs:13:13
+   |
+13 | use tauri::{AppHandle, Emitter, Manager};
+   |             ^^^^^^^^^  ^^^^^^^  ^^^^^^^
+
+warning: unused import: `rand::Rng`
+ --> src/core/websocket_manager.rs:6:5
+  |
+6 | use rand::Rng;
+  |     ^^^^^^^^^
+
+warning: unused import: `tokio_tungstenite::tungstenite::Message`
+  --> src/core/websocket_manager.rs:13:5
+   |
+13 | use tokio_tungstenite::tungstenite::Message;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `HistoricalDataPoint`
+ --> src/data/historical/commands.rs:4:22
+  |
+4 | use super::storage::{HistoricalDataPoint, HistoricalDataSet, OrderBookSnapshot};
+  |                      ^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `serde::Serialize`
+ --> src/data/historical/commands.rs:5:5
+  |
+5 | use serde::Serialize;
+  |     ^^^^^^^^^^^^^^^^
+
+warning: unused import: `AppHandle`
+ --> src/data/historical/commands.rs:7:13
+  |
+7 | use tauri::{AppHandle, State};
+  |             ^^^^^^^^^
+

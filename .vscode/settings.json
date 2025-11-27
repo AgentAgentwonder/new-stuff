@@ -1,0 +1,11 @@
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "*.{ts,tsx,rs,py}",
+        "cmd": "git add ${file} && git commit -m 'Secure commit: ${fileBasename}' --verify"
+      }
+    ],
+    "exclude": ["**/node_modules/**", "**/target/**", "*.env*", "*.secret*"]
+  }
+}
