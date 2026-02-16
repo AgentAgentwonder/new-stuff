@@ -1,0 +1,177 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "Memecoin Trader",
+    "description": "Real-time memecoin trading application with AI-powered detection and analysis",
+    "type": "tauri-app",
+    "tech_stack": {
+      "frontend": "React + TypeScript",
+      "backend": "Rust (Tauri)",
+      "blockchain": "Solana",
+      "apis": ["Helius", "Jupiter", "DexScreener"]
+    }
+  },
+  "cto": {
+    "name": "AI CTO Assistant",
+    "role": "Chief Technology Officer",
+    "specialization": "Blockchain Trading Systems",
+    "expertise": [
+      "Solana Development",
+      "Real-time Data Processing",
+      "AI Trading Algorithms",
+      "Risk Management",
+      "WebSocket Integration",
+      "Tauri Desktop Apps"
+    ]
+  },
+  "memory": {
+    "enabled": true,
+    "storage_path": "./.cto/memory",
+    "retention_days": 30,
+    "categories": {
+      "code_patterns": {
+        "description": "Common coding patterns and best practices",
+        "priority": "high"
+      },
+      "api_integrations": {
+        "description": "API endpoints and integration patterns",
+        "priority": "high"
+      },
+      "trading_logic": {
+        "description": "Trading algorithms and risk calculations",
+        "priority": "critical"
+      },
+      "debug_solutions": {
+        "description": "Common issues and their solutions",
+        "priority": "medium"
+      },
+      "performance_optimizations": {
+        "description": "Performance improvements and benchmarks",
+        "priority": "medium"
+      }
+    }
+  },
+  "prompts": {
+    "base_system_prompt": "You are the CTO for a high-frequency memecoin trading application. You specialize in Solana blockchain development, real-time data processing, and AI-powered trading algorithms. Always prioritize security, performance, and risk management in your recommendations.",
+    "code_review_prompt": "Review this code for potential security vulnerabilities, performance issues, and trading logic errors. Focus on: 1) Smart contract interaction safety 2) Real-time data handling 3) Risk management implementation 4) Memory leaks and resource management",
+    "debug_prompt": "Analyze this issue in the context of a real-time trading system. Consider: 1) Market data latency 2) WebSocket connection stability 3) Transaction failure handling 4) User fund safety",
+    "feature_development_prompt": "Design this feature with: 1) Modular architecture 2) Comprehensive error handling 3) Real-time performance 4) Security first approach 5) Comprehensive testing strategy"
+  },
+  "task_runner": {
+    "enabled": true,
+    "workflows_path": "./.cto/workflows",
+    "auto_save": true,
+    "parallel_execution": true,
+    "max_concurrent_tasks": 4,
+    "task_categories": {
+      "development": {
+        "description": "Code development and implementation",
+        "timeout_minutes": 30
+      },
+      "testing": {
+        "description": "Unit tests and integration tests",
+        "timeout_minutes": 15
+      },
+      "deployment": {
+        "description": "Build and deployment tasks",
+        "timeout_minutes": 20
+      },
+      "monitoring": {
+        "description": "System health and performance checks",
+        "timeout_minutes": 10
+      }
+    }
+  },
+  "environment": {
+    "required_vars": {
+      "HELIUS_API_KEY": {
+        "description": "Helius API key for real-time Solana data",
+        "required": true,
+        "sensitive": true,
+        "validation": "^[a-zA-Z0-9-]{32,}$"
+      },
+      "JUPITER_API_URL": {
+        "description": "Jupiter aggregator API endpoint",
+        "required": false,
+        "default": "https://quote-api.jup.ag/v6",
+        "validation": "^https?://.+"
+      },
+      "DEXSCREENER_API_URL": {
+        "description": "DexScreener API endpoint",
+        "required": false,
+        "default": "https://api.dexscreener.com/latest",
+        "validation": "^https?://.+"
+      },
+      "RPC_ENDPOINT": {
+        "description": "Solana RPC endpoint",
+        "required": false,
+        "default": "https://mainnet.helius-rpc.com/?api-key=${HELIUS_API_KEY}",
+        "validation": "^https?://.+"
+      },
+      "WALLET_PRIVATE_KEY": {
+        "description": "Private key for trading wallet (WARNING: HIGHLY SENSITIVE)",
+        "required": false,
+        "sensitive": true,
+        "validation": "^[1-9A-HJ-NP-Za-km-z]{87,88}$"
+      },
+      "DATABASE_URL": {
+        "description": "Database connection string",
+        "required": false,
+        "sensitive": true,
+        "validation": "^(postgres|mysql|sqlite)://.+"
+      },
+      "LOG_LEVEL": {
+        "description": "Application log level",
+        "required": false,
+        "default": "info",
+        "options": ["debug", "info", "warn", "error"]
+      },
+      "MAX_POSITION_SIZE": {
+        "description": "Maximum position size in USD",
+        "required": false,
+        "default": "1000",
+        "validation": "^\\d+$",
+        "type": "number"
+      },
+      "MIN_LIQUIDITY": {
+        "description": "Minimum liquidity requirement in USD",
+        "required": false,
+        "default": "10000",
+        "validation": "^\\d+$",
+        "type": "number"
+      }
+    },
+    "env_files": [
+      ".env.local",
+      ".env.development",
+      ".env.production"
+    ],
+    "validation": {
+      "strict_mode": true,
+      "fail_on_missing": false,
+      "warn_on_sensitive": true
+    }
+  },
+  "development": {
+    "hot_reload": true,
+    "auto_format": true,
+    "linting": {
+      "enabled": true,
+      "rules": ["security", "performance", "best-practices"]
+    },
+    "testing": {
+      "unit_test_coverage": ">= 80%",
+      "integration_tests": true,
+      "e2e_tests": false
+    }
+  },
+  "security": {
+    "api_key_rotation": true,
+    "private_key_encryption": true,
+    "audit_logging": true,
+    "rate_limiting": {
+      "enabled": true,
+      "requests_per_minute": 60
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "integrations": [
+    {
+      "name": "Helius WebSocket",
+      "purpose": "Real-time Solana transaction monitoring",
+      "base_url": "wss://mainnet.helius-rpc.com/?api-key=${HELIUS_API_KEY}",
+      "authentication": {
+        "type": "api_key",
+        "header": "api-key",
+        "env_var": "HELIUS_API_KEY"
+      },
+      "endpoints": {
+        "websocket": "wss://mainnet.helius-rpc.com/?api-key=${HELIUS_API_KEY}",
+        "rpc": "https://mainnet.helius-rpc.com/?api-key=${HELIUS_API_KEY}",
+        "get_asset": {
+          "method": "POST",
+          "path": "",
+          "body": {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "getAsset",
+            "params": { "id": "${mint}" }
+          }
+        }
+      },
+      "rate_limits": {
+        "requests_per_second": 100,
+        "connections_per_minute": 10
+      },
+      "error_handling": {
+        "reconnect_strategy": "exponential_backoff",
+        "max_retries": 10,
+        "retry_delays": [1000, 2000, 4000, 8000, 16000]
+      }
+    },
+    {
+      "name": "Jupiter Aggregator",
+      "purpose": "Token swapping and routing",
+      "base_url": "https://quote-api.jup.ag/v6",
+      "authentication": {
+        "type": "none",
+        "rate_limited": true
+      },
+      "endpoints": {
+        "quote": {
+          "method": "GET",
+          "path": "/quote",
+          "params": {
+            "inputMint": "string",
+            "outputMint": "string", 
+            "amount": "number",
+            "slippage": "number"
+          }
+        },
+        "swap": {
+          "method": "POST",
+          "path": "/swap",
+          "body": "transaction_payload"
+        }
+      },
+      "rate_limits": {
+        "requests_per_minute": 60
+      },
+      "common_errors": {
+        "insufficient_liquidity": "Handle by reducing amount or trying different route",
+        "high_slippage": "Increase slippage tolerance or wait for better conditions",
+        "timeout": "Retry with exponential backoff"
+      }
+    },
+    {
+      "name": "DexScreener",
+      "purpose": "Token price and market data",
+      "base_url": "https://api.dexscreener.com/latest",
+      "authentication": {
+        "type": "none"
+      },
+      "endpoints": {
+        "search": {
+          "method": "GET",
+          "path": "/dex/search",
+          "params": {
+            "q": "search_query"
+          }
+        },
+        "pairs": {
+          "method": "GET", 
+          "path": "/dex/pairs/${chainId}",
+          "params": {
+            "limit": "number"
+          }
+        }
+      },
+      "rate_limits": {
+        "requests_per_minute": 300
+      },
+      "data_format": {
+        "price": "float",
+        "market_cap": "float", 
+        "volume_24h": "float",
+        "liquidity": "float"
+      }
+    }
+  ]
+}

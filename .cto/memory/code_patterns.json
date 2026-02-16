@@ -1,0 +1,41 @@
+{
+  "patterns": [
+    {
+      "name": "WebSocket Connection Management",
+      "category": "real-time_data",
+      "pattern": "Always implement reconnection logic with exponential backoff",
+      "code_example": {
+        "typescript": "private attemptReconnect(): void {\n  if (!this.isRunning) return;\n  \n  if (this.reconnectAttempts >= this.maxReconnectAttempts) {\n    console.error('Max reconnect attempts reached');\n    return;\n  }\n\n  this.reconnectAttempts++;\n  const delay = this.reconnectDelay * Math.pow(2, this.reconnectAttempts - 1);\n  \n  setTimeout(() => {\n    this.connect();\n  }, delay);\n}",
+        "rust": "fn attempt_reconnect(&mut self) {\n    if !self.is_running {\n        return;\n    }\n    \n    if self.reconnect_attempts >= self.max_reconnect_attempts {\n        eprintln!(\"Max reconnect attempts reached\");\n        return;\n    }\n    \n    self.reconnect_attempts += 1;\n    let delay = self.reconnect_delay * 2_u32.pow(self.reconnect_attempts - 1);\n    \n    thread::sleep(Duration::from_millis(delay));\n    self.connect();\n}"
+      },
+      "benefits": ["Handles network instability", "Prevents infinite loops", "Graceful degradation"]
+    },
+    {
+      "name": "Error Boundary Pattern",
+      "category": "react_components",
+      "pattern": "Wrap async operations in try-catch with user feedback",
+      "code_example": {
+        "typescript": "const handleTrade = async (detection: NewCoinDetection) => {\n  try {\n    setSwapInProgress(true);\n    const result = await jupiterSwap.quickBuy(detection.coin.address, amount);\n    if (result.success) {\n      notifications.sendSuccess('Trade executed successfully');\n    }\n  } catch (error) {\n    console.error('Trade failed:', error);\n    notifications.sendError('Trade failed: ' + error.message);\n  } finally {\n    setSwapInProgress(false);\n  }\n};"
+      },
+      "benefits": ["Prevents UI crashes", "Better user experience", "Easier debugging"]
+    },
+    {
+      "name": "Resource Cleanup",
+      "category": "lifecycle_management",
+      "pattern": "Always cleanup intervals and connections in useEffect return",
+      "code_example": {
+        "typescript": "useEffect(() => {\n  const interval = setInterval(() => {\n    pollData();\n  }, 2000);\n  \n  const ws = new WebSocket(url);\n  ws.connect();\n  \n  return () => {\n    clearInterval(interval);\n    ws.close();\n  };\n}, []);"
+      },
+      "benefits": ["Prevents memory leaks", "Proper resource management", "Avoids zombie processes"]
+    },
+    {
+      "name": "API Rate Limiting",
+      "category": "api_integration",
+      "pattern": "Implement request queuing with delay between calls",
+      "code_example": {
+        "typescript": "class RateLimitedAPI {\n  private lastRequest = 0;\n  private minDelay = 1000; // 1 second\n  \n  async makeRequest(url: string): Promise<Response> {\n    const now = Date.now();\n    const timeSinceLastRequest = now - this.lastRequest;\n    \n    if (timeSinceLastRequest < this.minDelay) {\n      await new Promise(resolve => \n        setTimeout(resolve, this.minDelay - timeSinceLastRequest)\n      );\n    }\n    \n    this.lastRequest = Date.now();\n    return fetch(url);\n  }\n}"
+      },
+      "benefits": ["Prevents API bans", "Consistent performance", "Professional integration"]
+    }
+  ]
+}
