@@ -40,6 +40,31 @@
   --font-scale: 1;
 }
 
+/* v0 Design Theme - Dashboard */
+:root[data-theme='v0'],
+:root.v0-theme {
+  --background: 228 30% 8%;
+  --foreground: 210 20% 95%;
+  --card: 228 30% 11%;
+  --card-foreground: 210 20% 95%;
+  --popover: 228 30% 10%;
+  --popover-foreground: 210 20% 95%;
+  --primary: 160 84% 39%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 228 20% 18%;
+  --secondary-foreground: 210 20% 90%;
+  --muted: 225 20% 15%;
+  --muted-foreground: 215 15% 55%;
+  --accent: 160 84% 39%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 63% 45%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 225 20% 18%;
+  --input: 225 20% 15%;
+  --ring: 160 84% 39%;
+  --radius: 0.5rem;
+}
+
 :root[data-theme='midnight'] {
   --background: oklch(0.07 0 210);
   --foreground: oklch(0.95 0.01 200);
