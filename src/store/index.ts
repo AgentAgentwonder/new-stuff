@@ -7,4 +7,5 @@ export * from './createBoundStore';
 export * from './uiStore';
 export * from './themeStore';
 export * from './accessibilityStore';
+export * from './contractRiskStore';
 // export * from './settingsStore';

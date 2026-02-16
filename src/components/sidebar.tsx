@@ -40,6 +40,7 @@ export default function Sidebar({ isOpen }: SidebarProps) {
         { label: 'Futures', href: '/trading/futures', icon: <span>▸</span> },
         { label: 'Paper Trading', href: '/trading/paper', icon: <span>▸</span> },
         { label: 'Order Book', href: '/trading/orderbook', icon: <span>▸</span> },
+        { label: 'Contract Risk', href: '/trading/contract-risk', icon: <span>▸</span> },
         { label: 'P2P Marketplace', href: '/trading/p2p', icon: <span>▸</span> },
       ],
     },

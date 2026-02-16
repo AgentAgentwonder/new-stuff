@@ -106,3 +106,21 @@ pub async fn list_insurance_providers(
     let engine = safety_engine.read().await;
     Ok(engine.list_insurance_providers())
 }
+
+#[tauri::command]
+pub async fn get_emergency_halt(
+    safety_engine: State<'_, SharedSafetyEngine>,
+) -> Result<bool, String> {
+    let engine = safety_engine.read().await;
+    Ok(engine.is_emergency_halt())
+}
+
+#[tauri::command]
+pub async fn set_emergency_halt(
+    enabled: bool,
+    safety_engine: State<'_, SharedSafetyEngine>,
+) -> Result<(), String> {
+    let mut engine = safety_engine.write().await;
+    engine.set_emergency_halt(enabled);
+    Ok(())
+}
