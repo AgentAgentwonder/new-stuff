@@ -1,0 +1,186 @@
+{
+  "name": "Trading Operations Workflow",
+  "description": "Automated trading system operations and monitoring",
+  "version": "1.0.0",
+  "tasks": [
+    {
+      "name": "start-trading-bot",
+      "description": "Initialize and start the trading bot",
+      "steps": [
+        {
+          "name": "validate-config",
+          "command": "npm run validate:trading-config",
+          "description": "Validate trading configuration"
+        },
+        {
+          "name": "connect-wallet",
+          "command": "npm run wallet:connect",
+          "description": "Connect trading wallet"
+        },
+        {
+          "name": "start-detection",
+          "command": "npm run detection:start",
+          "description": "Start coin detection service"
+        },
+        {
+          "name": "start-ai-engine",
+          "command": "npm run ai:start",
+          "description": "Initialize AI trading engine"
+        }
+      ],
+      "parallel": false,
+      "timeout_minutes": 10
+    },
+    {
+      "name": "emergency-stop",
+      "description": "Emergency stop all trading activities",
+      "steps": [
+        {
+          "name": "stop-all-trades",
+          "command": "npm run trading:stop-all",
+          "description": "Cancel all active trades"
+        },
+        {
+          "name": "close-positions",
+          "command": "npm run positions:close-all",
+          "description": "Close all open positions"
+        },
+        {
+          "name": "stop-detection",
+          "command": "npm run detection:stop",
+          "description": "Stop coin detection"
+        },
+        {
+          "name": "notify-admin",
+          "command": "npm run notify:emergency-stop",
+          "description": "Send emergency notification"
+        }
+      ],
+      "parallel": false,
+      "timeout_minutes": 5,
+      "critical": true
+    },
+    {
+      "name": "risk-assessment",
+      "description": "Comprehensive risk assessment",
+      "steps": [
+        {
+          "name": "portfolio-analysis",
+          "command": "npm run risk:portfolio",
+          "description": "Analyze portfolio risk"
+        },
+        {
+          "name": "market-volatility",
+          "command": "npm run risk:volatility",
+          "description": "Check market volatility"
+        },
+        {
+          "name": "liquidity-check",
+          "command": "npm run risk:liquidity",
+          "description": "Verify liquidity conditions"
+        },
+        {
+          "name": "generate-report",
+          "command": "npm run risk:report",
+          "description": "Generate risk report"
+        }
+      ],
+      "parallel": true,
+      "timeout_minutes": 15
+    },
+    {
+      "name": "performance-monitoring",
+      "description": "Monitor trading system performance",
+      "steps": [
+        {
+          "name": "check-latency",
+          "command": "npm run monitor:latency",
+          "description": "Check API response times"
+        },
+        {
+          "name": "memory-usage",
+          "command": "npm run monitor:memory",
+          "description": "Monitor memory consumption"
+        },
+        {
+          "name": "websocket-status",
+          "command": "npm run monitor:websocket",
+          "description": "Check WebSocket connections"
+        },
+        {
+          "name": "error-rates",
+          "command": "npm run monitor:errors",
+          "description": "Track error rates"
+        }
+      ],
+      "parallel": true,
+      "timeout_minutes": 5,
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "name": "backup-data",
+      "description": "Backup critical trading data",
+      "steps": [
+        {
+          "name": "export-trades",
+          "command": "npm run backup:trades",
+          "description": "Export trade history"
+        },
+        {
+          "name": "backup-config",
+          "command": "npm run backup:config",
+          "description": "Backup configuration"
+        },
+        {
+          "name": "backup-ai-models",
+          "command": "npm run backup:ai-models",
+          "description": "Backup trained AI models"
+        },
+        {
+          "name": "upload-backup",
+          "command": "npm run backup:upload",
+          "description": "Upload to secure storage"
+        }
+      ],
+      "parallel": false,
+      "timeout_minutes": 30,
+      "schedule": "0 2 * * *"
+    }
+  ],
+  "alerts": {
+    "high_drawdown": {
+      "condition": "portfolio_drawdown > 20%",
+      "action": "emergency-stop",
+      "notification": true
+    },
+    "api_failure": {
+      "condition": "api_error_rate > 10%",
+      "action": "switch-backup-api",
+      "notification": true
+    },
+    "memory_leak": {
+      "condition": "memory_usage > 2GB",
+      "action": "restart-services",
+      "notification": true
+    },
+    "websocket_disconnect": {
+      "condition": "websocket_disconnected > 30s",
+      "action": "reconnect-websocket",
+      "notification": true
+    }
+  },
+  "safety_checks": {
+    "pre_trade": [
+      "validate_wallet_balance",
+      "check_api_limits", 
+      "verify_token_legitimacy",
+      "assess_market_conditions"
+    ],
+    "post_trade": [
+      "confirm_transaction",
+      "update_portfolio",
+      "log_trade_details",
+      "notify_user"
+    ]
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "name": "Development Workflow",
+  "description": "Automated development tasks for memecoin trading application",
+  "version": "1.0.0",
+  "tasks": [
+    {
+      "name": "setup-development",
+      "description": "Initialize development environment",
+      "steps": [
+        {
+          "name": "install-dependencies",
+          "command": "npm install",
+          "description": "Install Node.js dependencies"
+        },
+        {
+          "name": "install-rust-deps",
+          "command": "cd src-tauri && cargo build",
+          "description": "Install and build Rust dependencies"
+        },
+        {
+          "name": "setup-env",
+          "command": "cp .env.example .env.local",
+          "description": "Create local environment file",
+          "optional": true
+        }
+      ],
+      "parallel": false
+    },
+    {
+      "name": "start-development",
+      "description": "Start development servers",
+      "steps": [
+        {
+          "name": "start-frontend",
+          "command": "npm run dev",
+          "description": "Start Vite development server",
+          "background": true
+        },
+        {
+          "name": "start-tauri",
+          "command": "npm run tauri:dev",
+          "description": "Start Tauri development mode",
+          "background": true,
+          "delay": 5000
+        }
+      ],
+      "parallel": true
+    },
+    {
+      "name": "run-tests",
+      "description": "Execute test suite",
+      "steps": [
+        {
+          "name": "unit-tests",
+          "command": "npm test",
+          "description": "Run unit tests"
+        },
+        {
+          "name": "type-check",
+          "command": "npm run type-check",
+          "description": "Run TypeScript type checking"
+        },
+        {
+          "name": "lint-code",
+          "command": "npm run lint",
+          "description": "Run ESLint"
+        }
+      ],
+      "parallel": false
+    },
+    {
+      "name": "build-production",
+      "description": "Build for production",
+      "steps": [
+        {
+          "name": "build-frontend",
+          "command": "npm run build",
+          "description": "Build React frontend"
+        },
+        {
+          "name": "build-tauri",
+          "command": "npm run tauri:build",
+          "description": "Build Tauri application"
+        },
+        {
+          "name": "optimize-build",
+          "command": "npm run optimize",
+          "description": "Optimize build size",
+          "optional": true
+        }
+      ],
+      "parallel": false
+    },
+    {
+      "name": "security-audit",
+      "description": "Security checks and audits",
+      "steps": [
+        {
+          "name": "audit-deps",
+          "command": "npm audit",
+          "description": "Audit Node.js dependencies"
+        },
+        {
+          "name": "audit-cargo",
+          "command": "cd src-tauri && cargo audit",
+          "description": "Audit Rust dependencies"
+        },
+        {
+          "name": "scan-secrets",
+          "command": "git-secrets scan",
+          "description": "Scan for leaked secrets",
+          "optional": true
+        }
+      ],
+      "parallel": true
+    },
+    {
+      "name": "deploy-staging",
+      "description": "Deploy to staging environment",
+      "steps": [
+        {
+          "name": "run-tests",
+          "command": "npm run test:ci",
+          "description": "Run CI tests"
+        },
+        {
+          "name": "build-artifacts",
+          "command": "npm run build",
+          "description": "Create deployment artifacts"
+        },
+        {
+          "name": "deploy",
+          "command": "npm run deploy:staging",
+          "description": "Deploy to staging"
+        }
+      ],
+      "parallel": false
+    }
+  ],
+  "triggers": {
+    "on_push": {
+      "branches": ["main", "develop"],
+      "tasks": ["run-tests", "security-audit"]
+    },
+    "on_pull_request": {
+      "branches": ["main"],
+      "tasks": ["run-tests", "security-audit"]
+    }
+  },
+  "environment": {
+    "development": {
+      "env_file": ".env.local",
+      "variables": {
+        "NODE_ENV": "development",
+        "LOG_LEVEL": "debug",
+        "HOT_RELOAD": "true"
+      }
+    },
+    "staging": {
+      "env_file": ".env.staging", 
+      "variables": {
+        "NODE_ENV": "staging",
+        "LOG_LEVEL": "info"
+      }
+    },
+    "production": {
+      "env_file": ".env.production",
+      "variables": {
+        "NODE_ENV": "production",
+        "LOG_LEVEL": "warn"
+      }
+    }
+  }
+}
