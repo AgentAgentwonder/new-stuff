@@ -1,0 +1,9 @@
+C:\dev\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\src-tauri\target\release\deps\windows_collections-15459ad299f832a5.d: C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-collections-0.2.0\src\lib.rs C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-collections-0.2.0\src\bindings.rs C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-collections-0.2.0\src\../readme.md
+
+C:\dev\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\src-tauri\target\release\deps\libwindows_collections-15459ad299f832a5.rlib: C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-collections-0.2.0\src\lib.rs C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-collections-0.2.0\src\bindings.rs C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-collections-0.2.0\src\../readme.md
+
+C:\dev\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\src-tauri\target\release\deps\libwindows_collections-15459ad299f832a5.rmeta: C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-collections-0.2.0\src\lib.rs C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-collections-0.2.0\src\bindings.rs C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-collections-0.2.0\src\../readme.md
+
+C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-collections-0.2.0\src\lib.rs:
+C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-collections-0.2.0\src\bindings.rs:
+C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\windows-collections-0.2.0\src\../readme.md:

@@ -1,0 +1,9 @@
+C:\dev\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\src-tauri\target\release\deps\cargo_platform-a1611fdf5b626bf7.d: C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cargo-platform-0.1.9\src\lib.rs C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cargo-platform-0.1.9\src\cfg.rs C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cargo-platform-0.1.9\src\error.rs
+
+C:\dev\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\src-tauri\target\release\deps\libcargo_platform-a1611fdf5b626bf7.rlib: C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cargo-platform-0.1.9\src\lib.rs C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cargo-platform-0.1.9\src\cfg.rs C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cargo-platform-0.1.9\src\error.rs
+
+C:\dev\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\src-tauri\target\release\deps\libcargo_platform-a1611fdf5b626bf7.rmeta: C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cargo-platform-0.1.9\src\lib.rs C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cargo-platform-0.1.9\src\cfg.rs C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cargo-platform-0.1.9\src\error.rs
+
+C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cargo-platform-0.1.9\src\lib.rs:
+C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cargo-platform-0.1.9\src\cfg.rs:
+C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\cargo-platform-0.1.9\src\error.rs:

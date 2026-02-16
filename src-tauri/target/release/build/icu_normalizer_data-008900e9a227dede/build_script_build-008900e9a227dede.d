@@ -1,0 +1,5 @@
+C:\dev\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\src-tauri\target\release\build\icu_normalizer_data-008900e9a227dede\build_script_build-008900e9a227dede.d: C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer_data-2.1.1\build.rs
+
+C:\dev\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\src-tauri\target\release\build\icu_normalizer_data-008900e9a227dede\build_script_build-008900e9a227dede.exe: C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer_data-2.1.1\build.rs
+
+C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer_data-2.1.1\build.rs:

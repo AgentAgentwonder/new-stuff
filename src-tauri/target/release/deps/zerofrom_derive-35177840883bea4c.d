@@ -1,0 +1,6 @@
+C:\dev\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\src-tauri\target\release\deps\zerofrom_derive-35177840883bea4c.d: C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\zerofrom-derive-0.1.6\src\lib.rs C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\zerofrom-derive-0.1.6\src\visitor.rs
+
+C:\dev\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\eclipse-market-pro-v2-feat-bridge-trading-events-tauri-listeners\src-tauri\target\release\deps\zerofrom_derive-35177840883bea4c.dll: C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\zerofrom-derive-0.1.6\src\lib.rs C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\zerofrom-derive-0.1.6\src\visitor.rs
+
+C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\zerofrom-derive-0.1.6\src\lib.rs:
+C:\Users\living\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\zerofrom-derive-0.1.6\src\visitor.rs:
