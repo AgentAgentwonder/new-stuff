@@ -33,6 +33,7 @@ const TradingFuturesPage = lazy(() => import('@/pages/trading/futures/page'));
 const TradingP2PPage = lazy(() => import('@/pages/trading/p2p/page'));
 const TradingPaperPage = lazy(() => import('@/pages/trading/paper/page'));
 const TradingOrderbookPage = lazy(() => import('@/pages/trading/orderbook/page'));
+const TradingContractRiskPage = lazy(() => import('@/pages/trading/contract-risk/page'));
 const LearningPage = lazy(() => import('@/pages/learning/page'));
 const SettingsPage = lazy(() => import('@/pages/settings/page'));
 const WorkspacesPage = lazy(() => import('@/pages/workspaces/page'));
@@ -89,6 +90,7 @@ function App() {
               <Route path="/trading/p2p" element={<TradingP2PPage />} />
               <Route path="/trading/paper" element={<TradingPaperPage />} />
               <Route path="/trading/orderbook" element={<TradingOrderbookPage />} />
+              <Route path="/trading/contract-risk" element={<TradingContractRiskPage />} />
 
               {/* Other Pages */}
               <Route path="/learning" element={<LearningPage />} />

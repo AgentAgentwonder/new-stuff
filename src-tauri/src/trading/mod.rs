@@ -1,5 +1,7 @@
 pub mod auto_trading;
 pub mod backtesting;
+pub mod contract_risk;
+pub mod contract_risk_commands;
 pub mod copy_trading;
 pub mod database;
 pub mod limit_orders;
@@ -13,6 +15,8 @@ pub mod types;
 
 pub use auto_trading::*;
 pub use backtesting::*;
+pub use contract_risk::*;
+pub use contract_risk_commands::*;
 pub use copy_trading::*;
 pub use database::{OrderDatabase, SharedOrderDatabase};
 pub use limit_orders::*;

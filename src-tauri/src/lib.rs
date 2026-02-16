@@ -489,6 +489,21 @@ pub fn run() {
             let safety_state: trading::SharedSafetyEngine = Arc::new(RwLock::new(safety_engine));
             manage_state!(app, safety_state.clone(), "SafetyEngine");
 
+            // Initialize contract risk service
+            startup_log!("Initializing contract risk service");
+            let contract_risk_service = tauri::async_runtime::block_on(async {
+                trading::contract_risk::ContractVerificationService::new(&app.handle()).await
+            })
+            .map_err(|e| {
+                startup_error!("Failed to initialize contract risk service: {}", e);
+                Box::new(std::io::Error::new(std::io::ErrorKind::Other, e.to_string()))
+                    as Box<dyn Error>
+            })?;
+            startup_log!("Contract risk service initialized");
+            let contract_risk_state: trading::contract_risk::SharedContractRiskService =
+                Arc::new(RwLock::new(contract_risk_service));
+            manage_state!(app, contract_risk_state.clone(), "ContractRiskService");
+
             // Initialize wallet monitor
             let monitor_handle = app.handle().clone();
             startup_log!("Spawning wallet monitor task");
@@ -1975,6 +1990,7 @@ pub fn run() {
             get_voice_capabilities,
             // Safety Mode Engine
             check_trade_safety,
+            pre_trade_contract_check,
             approve_trade,
             get_safety_policy,
             update_safety_policy,
@@ -1983,6 +1999,15 @@ pub fn run() {
             get_insurance_quote,
             select_insurance,
             list_insurance_providers,
+            get_emergency_halt,
+            set_emergency_halt,
+            // Contract Risk Monitoring
+            assess_contract_risk,
+            get_contract_risk_events,
+            monitor_contract,
+            unmonitor_contract,
+            list_monitored_contracts,
+            refresh_monitored_contracts,
             // Theme Engine
             theme_get_presets,
             theme_get_settings,

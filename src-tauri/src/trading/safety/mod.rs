@@ -48,6 +48,7 @@ pub struct SafetyEngine {
     cooldown_manager: CooldownManager,
     simulator: TransactionSimulator,
     insurance_coordinator: InsuranceCoordinator,
+    emergency_halt: bool,
 }
 
 impl SafetyEngine {
@@ -57,6 +58,7 @@ impl SafetyEngine {
             cooldown_manager: CooldownManager::new(cooldown_seconds),
             simulator: TransactionSimulator::default(),
             insurance_coordinator: InsuranceCoordinator::default(),
+            emergency_halt: false,
         }
     }
 
@@ -76,6 +78,26 @@ impl SafetyEngine {
         &mut self,
         request: SafetyCheckRequest,
     ) -> Result<SafetyCheckResult, String> {
+        if self.emergency_halt {
+            let policy_result = PolicyCheckResult::new_blocked(vec![PolicyViolation {
+                rule: "emergency_halt".to_string(),
+                message: "Emergency trading halt is active".to_string(),
+                severity: ViolationSeverity::Critical,
+                can_override: false,
+            }]);
+
+            return Ok(SafetyCheckResult {
+                allowed: false,
+                policy_result,
+                cooldown_status: None,
+                simulation: None,
+                impact_preview: None,
+                insurance_required: false,
+                insurance_recommendation: None,
+                mev_suggestions: Vec::new(),
+            });
+        }
+
         // Check policy violations
         let policy_result = self.policy_engine.check_trade_policy(
             &request.wallet_address,
@@ -176,6 +198,14 @@ impl SafetyEngine {
 
     pub fn reset_daily_limits(&mut self) {
         self.policy_engine.reset_daily_counts();
+    }
+
+    pub fn set_emergency_halt(&mut self, enabled: bool) {
+        self.emergency_halt = enabled;
+    }
+
+    pub fn is_emergency_halt(&self) -> bool {
+        self.emergency_halt
     }
 
     pub fn get_insurance_quote(
